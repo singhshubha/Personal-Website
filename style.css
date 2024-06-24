@@ -8,6 +8,7 @@
 
 body {
     font-family: "Poppins", sans-serif;
+    padding: 0 10rem;
 }
 
 html {
@@ -184,7 +185,9 @@ section {
     font-weight: 1000;
 }
 
-.section_text1{
+.section_text1 {
+    align-self: center;
+    text-align: center;
     color: rgb(85, 85, 85);
 }
 
@@ -197,6 +200,7 @@ section {
 .title {
     font-size: 3rem;
     align-self: center;
+    text-align: center;
 }
 
 /*Icon*/ 
@@ -315,7 +319,7 @@ section {
 
 .text-container {
     text-align: justify;
-    color: rgb(70, 66, 66);
+    color: rgb(85, 85, 85);
 }
 
 
@@ -323,4 +327,38 @@ section {
 
 #experience {
     position: relative;
+}
+
+.experience-sub-title {
+    color: rgb(97, 96, 96);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.experience-details-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.article-container {
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-around;
+}
+
+article {
+    display: flex;
+    width: 10rem;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+
+article .icon {
+    cursor: default;
 }
