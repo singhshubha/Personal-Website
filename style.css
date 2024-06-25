@@ -362,3 +362,19 @@ article {
 article .icon {
     cursor: default;
 }
+
+*Projects Section*/
+
+#projects {
+    position: relative;
+}
+
+.project-img {
+    border-radius: 2rem;
+    height: 80%;
+    width: 80%;
+}
+
+.experience-project-title {
+    margin: 1rem;
+}
