@@ -1,8 +1,34 @@
+
+
+@media screen and (max-width: 1400px) {
+    profile {
+        height: 80vh;
+        margin-bottom: 5rem;
+
+    }
+
+    .about-containers {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+
 @media screen and (max-width: 1200px) {
     #desktop-nav {
         display: none;
     }
     #hamburger-nav {
         display: flex;
+    }
+
+    #experience, .experience-details-container {
+        margin-top: 2rem;
+    }
+
+    #profile, .section-container {
+
     }
 }
