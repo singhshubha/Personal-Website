@@ -419,3 +419,14 @@ article .icon {
 .email-icon {
     height: 2rem;
 }
+
+/*Footer Section*/
+
+footer {
+    height: 30vh;
+    margin: 1rem;
+}
+
+footer p {
+    text-align: center;
+}
