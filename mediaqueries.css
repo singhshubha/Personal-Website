@@ -73,4 +73,41 @@
     .btn-container {
         flex-wrap: wrap;
     }
+
+    .contact-info-upper-container p, 
+    .nav-links a {
+        font-size: 1rem;
+    }
+
+    .experience-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .section_pic-container {
+        width: auto;
+        height: 45vh;
+        justify-content: center;
+    }
+
+    .section_text2 {
+        font-size: 1.25rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .text-container {
+        text-align: justify;
+    }
 }
