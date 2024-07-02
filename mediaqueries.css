@@ -29,6 +29,48 @@
     }
 
     #profile, .section-container {
+        display: block;
+    }
 
+    .arrow {
+        display: none;
+    }
+
+    section, .section-container {
+        height: fit-content;
+    }
+    section {
+        margin: 0 5%;
+    }
+    .section_pic-container{ 
+        width: 275px;
+        height: 275px;
+        margin: 0 auto 2rem;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    #contact, footer {
+        height: 40vh;
+    }
+
+    #profile {
+        height: 85vh;
+        margin-bottom: 0;
+    }
+
+    article {
+        font-size: 1rem;
+    }
+
+    footer nav {
+        height: fit-content;
+        margin-bottom: 2rem;
+    }
+
+    .about-containers, .contact-info-upper-container,
+    .btn-container {
+        flex-wrap: wrap;
     }
 }
