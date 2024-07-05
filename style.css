@@ -170,10 +170,10 @@ section {
     height: 80vh;
     z-index: 1;
 }
-.section_pic-container {
+.pic-container {
     display: flex;
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 400px;
     margin: auto 0;
 }
 
@@ -280,7 +280,6 @@ section {
 
 #about {
     position: relative;
-    z-index: 2;
 }
 
 .about-container {
@@ -288,13 +287,17 @@ section {
     gap: 2rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
-    padding-left: 4rem; /* Add space to the left */
-    padding-right: 4rem; /* Add space to the right */
 }
-.about_details-container {
-    display: flex;
+.about-details-container {
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.main-container {
+    display: flex;
+    gap: 4rem;
+    height: 80%;
 }
 
 .about-pic {
@@ -327,6 +330,12 @@ section {
 .section-container {
     gap: 4rem;
     height: 80%;
+}
+
+.about-pic-container {
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
 }
 
 .text-container {
@@ -391,15 +400,14 @@ article .icon {
     margin: 1rem 0;
     text-align: center;
 }
- /* 
-.project-container {
+
+
+.project-about-container {
     display: flex;
-    text-align: initial;
+    gap: 2rem;
     flex-wrap: wrap;
-    flex-direction: row;
-    gap: 2.5rem;
-    justify-content: space-around;
-}*/
+    margin-top: 2rem;
+}
 
 .project-card {
     border-color: black;
