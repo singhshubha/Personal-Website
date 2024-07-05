@@ -28,7 +28,7 @@
         margin-top: 2rem;
     }
 
-    #profile, .section-container {
+    #profile, .main-container {
         display: block;
     }
 
@@ -36,17 +36,20 @@
         display: none;
     }
 
-    section, .section-container {
+    section, .main-container {
         height: fit-content;
     }
     section {
         margin: 0 5%;
     }
-    .section_pic-container{ 
+    .pic-container{ 
         width: 275px;
         height: 275px;
         margin: 0 auto 2rem;
     }
+
+    .about-container {
+        margin-top: 0;
 }
 
 
