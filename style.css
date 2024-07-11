@@ -1,5 +1,5 @@
 /* General */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');  /*i have used the same font throughout my website*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 * {
     margin: 0;
@@ -8,7 +8,7 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    padding: 0 10rem;
+    padding: 0 5rem;
 }
 
 html {
@@ -166,6 +166,7 @@ section {
 #profile {
     display: flex;
     justify-content: center;
+    padding: 5rem;
     gap: 5rem;
     height: 80vh;
     z-index: 1;
