@@ -286,7 +286,7 @@ section {
 .about-container {
     display: flex;
     gap: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     margin-top: 2rem;
 }
 .about-details-container {
@@ -318,12 +318,11 @@ section {
 }
 
 .details-container {
-    padding: 1.5rem;
+    padding: 3rem;
     flex: 1;
     background: white;
     border-radius: 2rem;
     border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
     text-align: center;
 }
 
@@ -356,7 +355,7 @@ section {
     color: rgb(97, 96, 96);
     font-weight: 600;
     font-size: 1.75rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 .experience-details-container {
@@ -365,13 +364,20 @@ section {
     flex-direction: column;
 }
 
+.experience-container {
+    display: flex;
+    gap: 2rem;
+    margin: 10rem;
+}
+
 .article-container {
     display: flex;
     text-align: initial;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     gap: 2rem;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 }
 
 article {
