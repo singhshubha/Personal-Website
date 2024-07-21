@@ -1,7 +1,7 @@
 
 
 @media screen and (max-width: 1400px) {
-    profile {  
+    #profile {
         height: 80vh;
         margin-bottom: 5rem;
 
@@ -9,6 +9,10 @@
 
     .about-containers {
         flex-wrap: wrap;
+    }
+
+    #contact, #projects {
+        height: fit-content;
     }
 }
 
@@ -44,10 +48,11 @@
         align-items: center;
     }
 
-    .experience-container {
-        display: flex;
-        flex-direction: column;
+    .about-details-container {
+        padding-top: 2rem;
     }
+
+
 
     #profile, .main-container {
         display: block;
@@ -72,6 +77,16 @@
     .about-container {
         margin-top: 0;
     }
+
+    .contact-info-upper-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-container p {
+        font-size: 15px;
+    }
+
 }
 
 
