@@ -8,7 +8,6 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    padding: 0 5rem;
 }
 
 html {
@@ -72,30 +71,30 @@ a:hover {
 /* Hamburger Menu*/
 #hamburger-nav {
     display: none;
-}
-
-.hamburger-menu {
+  }
+  
+  .hamburger-menu {
     position: relative;
     display: inline-block;
-}
-
-.hamburger-icon {
+  }
+  
+  .hamburger-icon {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 25px;
+    height: 24px;
     width: 30px;
     cursor: pointer;
-}
-
-.hamburger-icon span {
+  }
+  
+  .hamburger-icon span {
     width: 100%;
     height: 2px;
     background-color: black;
     transition: all 0.3 ease-in-out;
-}  
-
-.menu-links {
+  }
+  
+  .menu-links {
     position: absolute;
     top: 100%;
     right: 0;
@@ -104,9 +103,9 @@ a:hover {
     max-height: 0;
     overflow: hidden;
     transition: all 0.3 ease-in-out;
-}
-
-.menu-links a{
+  }
+  
+  .menu-links a {
     display: block;
     padding: 10px;
     text-align: center;
@@ -114,36 +113,39 @@ a:hover {
     color: black;
     text-decoration: none;
     transition: all 0.3 ease-in-out;
-}
-
-
-.menu-links li {
-    list-style: none;   
-}
-
-.menu-links.open {
+  }
+  
+  .menu-links li {
+    list-style: none;
+  }
+  
+  .menu-links.open {
     max-height: 300px;
-}
-
-.hamburger.icon.open span:first-child {
-    transform: rotate(45deg)  translate(10px, 5px);
-}
-.hamburger.icon.open span:first-child(2) {
-    opacity: 0;;
-}
-.hamburger.icon.open span:first-child {
+  }
+  
+  .hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+  }
+  
+  .hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger-icon.open span:last-child {
     transform: rotate(-45deg) translate(10px, -5px);
-}
-
-.hamburger-icon span:first-child {
+  }
+  
+  .hamburger-icon span:first-child {
     transform: none;
-}
-.hamburger-icon span:first-child {
+  }
+  
+  .hamburger-icon span:first-child {
     opacity: 1;
-}
-.hamburger-icon span:first-child {
+  }
+  
+  .hamburger-icon span:first-child {
     transform: none;
-}
+  }
 
 
 
@@ -166,10 +168,8 @@ section {
 #profile {
     display: flex;
     justify-content: center;
-    padding: 5rem;
     gap: 5rem;
     height: 80vh;
-    z-index: 1;
 }
 .pic-container {
     display: flex;
@@ -205,6 +205,13 @@ section {
     text-align: center;
 }
 
+.socials_icon {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
 /*Icon*/ 
 
 .icon {
@@ -219,12 +226,7 @@ section {
 
 }
 
-.socials_icon {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-    gap: 1rem;
-}
+
 
 /*Buttons*/
 
@@ -281,6 +283,7 @@ section {
 
 #about {
     position: relative;
+    margin: 8rem;
 }
 
 .about-container {
@@ -292,7 +295,7 @@ section {
 .about-details-container {
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .main-container {
@@ -318,7 +321,7 @@ section {
 }
 
 .details-container {
-    padding: 3rem;
+    padding: 2rem;
     flex: 1;
     background: white;
     border-radius: 2rem;
@@ -348,7 +351,7 @@ section {
 
 #experience {
     position: relative;
-    z-index: 3;
+    margin: 8rem;
 }
 
 .experience-sub-title {
@@ -367,7 +370,8 @@ section {
 .experience-container {
     display: flex;
     gap: 2rem;
-    margin: 10rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
 }
 
 .article-container {
@@ -395,6 +399,7 @@ article .icon {
 
 #projects {
     position: relative;
+    margin: 8rem;
 }
 
 .project-img {
@@ -404,8 +409,8 @@ article .icon {
 }
 
 .project-title {
-    margin: 1rem 0;
-    text-align: center;
+    margin: 1rem;
+    color: black;
 }
 
 
@@ -427,6 +432,7 @@ article .icon {
     justify-content: center;
     flex-direction: column;
     height: 70vh;
+    margin: 8rem;
 }
 
 .contact-info-upper-container {
