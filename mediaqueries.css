@@ -14,9 +14,9 @@
     #contact, #projects {
         height: fit-content;
     }
+    
+
 }
-
-
 
 
 
@@ -48,11 +48,6 @@
         align-items: center;
     }
 
-    .full-pic-container {
-
-    }
-
-
 
     .about-details-container {
         padding-top: 2rem;
@@ -61,7 +56,10 @@
 
 
     #profile, .main-container {
-        display: block;
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 3rem;
+        margin-top: 2rem;
     }
 
     .arrow {
@@ -119,12 +117,13 @@
 
     .text-container {
         margin: auto 0rem;
-        width: 400px;
+        width: auto;
     }
 
     .paragraph {
         justify-content: center;
     }
+    
 
     #profile, .main-container {
         display: block;
@@ -147,7 +146,7 @@
     .pic-container{ 
         width: 275px;
         height: 275px;
-        margin: 0 auto 2rem;
+        justify-content: center;
     }
 
     .contact-info-upper-container {
