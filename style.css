@@ -83,6 +83,7 @@ a:hover {
     background-color: transparent; 
     z-index: 1; 
     margin-bottom: 0;
+    
 }
 
 #desktop-nav::before, #hamburger-nav::before {
@@ -204,7 +205,8 @@ section {
     gap: 5rem;
     position: relative;
     height: 100vh; /* Full height of the viewport */
-    margin-top: -80px;
+    margin-top: -140px;
+    background: linear-gradient(to bottom, #f0f0f0, white); /* Skin-colored fade to white */
 }
 .pic-container {
     display: flex;
@@ -396,6 +398,12 @@ section {
 #experience {
     position: relative;
     margin: 8rem;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#experience.visible {
+    opacity: 1;
 }
 
 .experience-sub-title {
@@ -407,13 +415,14 @@ section {
 
 .experience-details-container {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    flex-wrap: wrap;
+
 }
 
 .experience-container {
     display: flex;
     gap: 2rem;
+    flex-wrap: wrap;
     margin-bottom: 3rem;
     margin-top: 2rem;
 }
@@ -475,13 +484,14 @@ article .icon {
     justify-content: center;
     flex-direction: column;
     height: 70vh;
-    margin: 8rem;
+    background: linear-gradient(to top, #f0f0f0, white); /* Skin-colored fade to white */
 }
 
 
 .contact-info-upper-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     background: (250, 250, 250);
     margin: 2rem auto;
     padding: 0.5rem;
@@ -519,4 +529,13 @@ footer {
 
 footer p {
     text-align: center;
+}
+
+.section {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.section.visible {
+    opacity: 1;
 }

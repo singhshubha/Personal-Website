@@ -32,44 +32,30 @@
                 <li><a href="#experience" onclick = "toggleMenu()">Experience</a></li>
                 <li><a href="#projects" onclick = "toggleMenu()">Projects </a></li>
                 <li><a href="#contact " onclick = "toggleMenu()">Contact</a></li>
-                <div class="dark-mode-toggle">
-                    <button id="dark-mode-btn" onclick="toggleDarkMode()">Dark Mode</button>
-                </div>
+
                 
             </div>
         </div>
     </nav>
-    <section id = "profile">
-        <div class = "pic-container">
+    <section id="profile">
+        <div class="pic-container">
             <img src="./assets/PP.png" alt="shubha profile picture">
         </div>
-        <div class = "section_text">
-            <p class = "section_text1">Hello I'm</p>
-            <h1 class = "title">Shubha Swarnim Singh</h1>
-            <p class = "section_text2">ASCI Treasurer</p>
-            <div class = "btn_container">
-                <button class = "btn btn-color1" 
-                onclick="window.open('./assets/Shubha_Singh_Resume.pdf')">
-                    Resume</button>
-                <button class = "btn btn-color2" 
-                onclick = "location.href = './#contact'">
-                    Contact Info</button>
+        <div class="section_text">
+            <p class="section_text1">Hello I'm</p>
+            <h1 class="title">Shubha Swarnim Singh</h1>
+            <p class="section_text2">ASCI Treasurer</p>
+            <div class="btn_container">
+                <button class="btn btn-color1" onclick="window.open('./assets/Shubha_Singh_Resume.pdf')">Resume</button>
+                <button class="btn btn-color2" onclick="location.href = './#contact'">Contact Info</button>
             </div>
-            <div class = "socials_icon">
-                <img src="./assets/linkedin.png" 
-                alt="My linkedIn profile" 
-                class = "icon" 
-                onclick = "location.href = 'https://www.linkedin.com/in/shubha-swarnim-s-9940a5211/'"
-                />
-                <img src="./assets/github.png" 
-                alt="My Github profile" 
-                class = "icon" 
-                onclick = "location.href = 'https://github.com/singhshubha'"
-                />
+            <div class="socials_icon">
+                <img src="./assets/linkedin.png" alt="My linkedIn profile" class="icon" onclick="location.href = 'https://www.linkedin.com/in/shubha-swarnim-s-9940a5211/'" />
+                <img src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href = 'https://github.com/singhshubha'" />
             </div>
         </div>
     </section>
-    <section id = "about">
+    <section id="about" class="section">
             <p class = "section_text1">Get To Know More</p>
             <h1 class = "title">About Me</h1>
             <div class = "main-container">
@@ -105,9 +91,8 @@
                         </div>
                     </div>
                     <div class = "text-container">
-                        <p class = "paragraph"> Hello! I'm Shubha Swarnim Singh, a Computer Science and International
-                            Political Economy major at The College of Idaho, with a minor in Spanish.
-                            As an ASCI Senator, Treasurer, and CDI Representative, 
+                        <p class = "paragraph"> Hello! I'm Shubha Swarnim Singh, a Computer Science and Business Administration major at The College of Idaho, with a minor in Political Economy and Spanish.
+                            As an ASCI Treasurer, and CDI Representative, 
                             I advocate for tech-driven solutions and inclusivity on campus. 
                             I lead as President of the Boxing Club and 
                             Public Relations Officer of the Asian Student Association, 
@@ -126,29 +111,20 @@
             class = "arrow icon"
             onclick="location.href= './#experience'">
     </section>
-    <section id = "experience">
+     <section id="experience" class="section">
         <p class = "section_text1">Get To Know </p>
         <h1 class = "title">My Experiences</h1>
         <div class = "experience-details-container">
             <div class = "experience-container">
                 <div class = "details-container">
-                    <h2 class = "experience-sub-title">Frontend Development</h2>
+                    <h2 class = "experience-sub-title">Programming Languages</h2>
                     <div class = "article-container">
                         <article>
                             <img src="./assets/checkmark.png" 
                             alt="expereince icon"
                             class = "icon">
                             <div>
-                                <h3 >HTML</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" 
-                            alt="expereince icon"
-                            class = "icon">
-                            <div>
-                                <h3 >CSS</h3>
+                                <h3 >Python</h3>
                                 <p>Experienced</p>
                             </div>
                         </article>
@@ -158,21 +134,30 @@
                             class = "icon">
                             <div>
                                 <h3 >JavaScript</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" 
+                            alt="expereince icon"
+                            class = "icon">
+                            <div>
+                                <h3 >PHP </h3>
                                 <p>Basic</p>
                             </div>
                         </article>
                     </div>
                 </div>
                 <div class = "details-container">
-                    <h2 class = "experience-sub-title">Backend Development</h2>
+                    <h2 class = "experience-sub-title">Web Development</h2>
                     <div class = "article-container">
                         <article>
                             <img src="./assets/checkmark.png" 
                             alt="expereince icon"
                             class = "icon">
                             <div>
-                                <h3 >Python</h3>
-                                <p>Intermediate</p>
+                                <h3 >HTML/CSS</h3>
+                                <p>Experienced</p>
                             </div>
                         </article>
                         <article>
@@ -180,7 +165,48 @@
                             alt="expereince icon"
                             class = "icon">
                             <div>
-                                <h3 >SQL</h3>
+                                <h3 >BootStrap</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" 
+                            alt="experience icon"
+                            class = "icon">
+                            <div>
+                                <h3 >Websocket</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class = "details-container">
+                    <h2 class = "experience-sub-title">Frameworks</h2>
+                    <div class = "article-container">
+                        <article>
+                            <img src="./assets/checkmark.png" 
+                            alt="expereince icon"
+                            class = "icon">
+                            <div>
+                                <h3 >NodeJS</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" 
+                            alt="expereince icon"
+                            class = "icon">
+                            <div>
+                                <h3 >ExpressJS</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" 
+                            alt="experience icon"
+                            class = "icon">
+                            <div>
+                                <h3 >AngularJS</h3>
                                 <p>Intermediate</p>
                             </div>
                         </article>
@@ -189,8 +215,31 @@
                             alt="experience icon"
                             class = "icon">
                             <div>
-                                <h3 >SQLite</h3>
+                                <h3 >Flask</h3>
                                 <p>Intermediate</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class = "details-container">
+                    <h2 class = "experience-sub-title">Databases</h2>
+                    <div class = "article-container">
+                        <article>
+                            <img src="./assets/checkmark.png" 
+                            alt="expereince icon"
+                            class = "icon">
+                            <div>
+                                <h3 >SQL</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" 
+                            alt="expereince icon"
+                            class = "icon">
+                            <div>
+                                <h3 >SQLite3</h3>
+                                <p>Experienced</p>
                             </div>
                         </article>
                     </div>
@@ -202,43 +251,57 @@
         class = "arrow icon"
         onclick="location.href= './#projects'">
     </section>
-    <section id="projects">
+    <section id="projects" class="section">
         <p class="section_text1">Here Are My</p>
         <h1 class="title">Projects</h1>
         <div class="experience-details-container">
             <div class="project-about-container">
                 <div class="details-container project-card">
                     <div class="project-container">
-                        <img src="assets/investment_calculator.jpg" 
+                        <img src="assets/senate_voting_app.jpg" 
                         alt="stock-calculator" 
                         class="project-img"/>
                     </div>
-                    <h2 class="project-title">Investment Calculator</h2>
+                    <h2 class="project-title">Senate Voting App</h2>
                     <div class="btn_container">
-                        <button class="btn btn-color1" onclick="location.href = 'https://github.com/singhshubha?tab=repositories'">Open</button>
-                        <button class="btn btn-color1" onclick="location.href = 'https://github.com/singhshubha/Investment_Calculator'">Github</button>
+                        <!-- <button class="btn btn-color1" onclick="location.href = 'https://github.com/singhshubha?tab=repositories'">Open</button> -->
+                        <button class="btn btn-color1" onclick="location.href = 'https://github.com/singhshubha/InvesterMaster'">Github</button>
                     </div>
                 </div>
                 <div class="details-container project-card">
                     <div class="project-container">
-                        <img src="assets/personal-website.png" 
-                        alt="china-internship" 
+                        <img src="assets/invester_master.png" 
+                        alt="stock-calculator" 
                         class="project-img"/>
                     </div>
-                    <h2 class="project-title">Personal Website</h2>
+                    <h2 class="project-title">Invester Master</h2>
                     <div class="btn_container">
-                        <button class="btn btn-color1" onclick="location.href = 'https://github.com/singhshubha/Personal-Website'">Github</button>
+                        <!-- <button class="btn btn-color1" onclick="location.href = 'https://github.com/singhshubha?tab=repositories'">Open</button> -->
+                        <button class="btn btn-color1" onclick="location.href = 'https://github.com/singhshubha/InvesterMaster'">Github</button>
                     </div>
                 </div>
                 <div class="details-container project-card">
                     <div class="project-container">
-                        <img src="assets/project-1.png" 
+                        <img src="assets/in-memory_search_engine.jpg" 
+                        alt="stock-calculator" 
+                        class="project-img"/>
+                    </div>
+                    <h2 class="project-title">In-Memory Search Engine</h2>
+                    <div class="btn_container">
+                        <!-- <button class="btn btn-color1" onclick="location.href = 'https://github.com/singhshubha?tab=repositories'">Open</button> -->
+                        <button class="btn btn-color1" onclick="location.href = 'https://github.com/singhshubha/InvesterMaster'">Github</button>
+                    </div>
+                </div>
+                <div class="details-container project-card">
+                    <div class="project-container">
+                        <img src="assets/3D_hall_diagram.png" 
                         alt="china-internship" 
                         class="project-img"/>
                     </div>
                     <h2 class="project-title">3D Hall Diagram</h2>
+                    <h4>In Progress</h4>
                     <div class="btn_container">
-                        <button class="btn btn-color1" onclick="location.href = 'https://github.com/singhshubha?tab=repositories'">Github</button>
+                        <!-- <button class="btn btn-color1" onclick="location.href = 'https://github.com/singhshubha?tab=repositories'">Open</button> -->
                     </div>
                 </div>
 
@@ -249,7 +312,7 @@
         class = "arrow icon"
         onclick="location.href= './#contact'">
     </section>
-    <section id="contact">
+    <section id="contact" class="section">
             <p class="section_text1">Get In Touch</p>
             <h1 class="title">Contact Me</h1>
             <div class="contact-info-upper-container">
@@ -276,13 +339,13 @@
         <nav>
             <div class="nav-links-container">
                 <ul class =  "nav-links">
+                    <li><a href="#profile">Profile</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects </a></li>
-                    <li><a href="#contact ">Contact</a></li> 
             </div>
         </nav>
-        <p>Copyright &#169 2024 Shubha Swarnim Singh. All Rights Reserved.</p>
+        <p>Copyright &#169 2025 Shubha Swarnim Singh. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script> 
 </body>
