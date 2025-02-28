@@ -6,14 +6,13 @@
     padding: 0;
 }
 
-body {
-    font-family: "Poppins", sans-serif;
-}
-
 html, body {
     overflow-x: hidden;
 }
 
+body {
+    font-family: "Poppins", sans-serif;
+}
 
 html {
     scroll-behavior: smooth;
@@ -326,6 +325,8 @@ section {
 #about {
     position: relative;
     margin: 8rem;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 .about-container {
@@ -457,6 +458,8 @@ article .icon {
 #projects {
     position: relative;
     margin: 8rem;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 .project-img {
