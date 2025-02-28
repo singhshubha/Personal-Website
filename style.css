@@ -46,20 +46,20 @@ nav {
     height: 17vh;
 }
 
-.nav-links {
-    display: flex;
-    flex-direction: ;
-    gap: 1rem;
-    list-style: none;
-    flex-wrap: wrap;
-}
-
 .nav-links-container {
     display: flex;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    flex-wrap: wrap;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    justify-content: space-around; /* Center align items */
+}
 
 a {
     color: black;
