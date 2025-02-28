@@ -28,7 +28,9 @@
         gap: 5rem;
         position: relative;
         height: 100vh; /* Full height of the viewport */
-        margin-top: -160px;
+        margin-top: -170px;
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 
     .section_text {
