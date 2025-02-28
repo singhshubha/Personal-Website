@@ -47,11 +47,19 @@ nav {
 }
 
 .nav-links {
+    display: flex;
+    flex-direction: ;
     gap: 1rem;
     list-style: none;
-    font-size: 2 rem;
-    
+    flex-wrap: wrap;
 }
+
+.nav-links-container {
+    display: flex;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
 
 a {
     color: black;
@@ -211,6 +219,8 @@ section {
     position: relative;
     height: 100vh; /* Full height of the viewport */
     margin-top: -170px;
+    padding-left: 3rem;
+    padding-right: 3rem;
     background: linear-gradient(to bottom, #f0f0f0, white); /* Skin-colored fade to white */
 }
 .pic-container {
@@ -325,7 +335,8 @@ section {
 
 #about {
     position: relative;
-    margin: 8rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
@@ -336,7 +347,7 @@ section {
 
 .about-container {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     margin-bottom: 3rem;
     margin-top: 2rem;
 }
@@ -408,7 +419,7 @@ section {
 
 #experience {
     position: relative;
-    margin: 8rem;
+    margin: 6rem;
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
@@ -462,7 +473,7 @@ article .icon {
 
 #projects {
     position: relative;
-    margin: 8rem;
+    margin: 6rem;
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
@@ -502,7 +513,8 @@ article .icon {
     flex-direction: column;
     height: 70vh;
     background: linear-gradient(to top, #f0f0f0, white); /* Skin-colored fade to white */
-
+    padding-left: 3rem;
+    padding-right: 3rem;
 
 }
 
@@ -543,7 +555,8 @@ footer {
     background-color: #f0f0f0; /* Light grey background */
     color: #333; /* Darker grey for text to contrast */
     height: 30vh;
-    margin:  0.5 1rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
 }
 
 footer p {
@@ -552,4 +565,5 @@ footer p {
 
 .section.visible {
     opacity: 1;
+
 }
