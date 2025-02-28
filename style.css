@@ -330,6 +330,10 @@ section {
     transition: opacity 1s ease-in-out;
 }
 
+#about.visible {
+    opacity: 1;
+}
+
 .about-container {
     display: flex;
     gap: 2rem;
@@ -461,6 +465,10 @@ article .icon {
     margin: 8rem;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+}
+
+#projects.visible {
+    opacity: 1;
 }
 
 .project-img {
