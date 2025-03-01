@@ -278,6 +278,10 @@ section {
 
 }
 
+.email-icon-contact {
+    cursor: pointer;
+    height: 3rem;
+}
 
 
 /*Buttons*/
@@ -303,7 +307,7 @@ section {
 
 .btn-color1:hover, .btn-color2:hover {
     cursor: pointer;;
-    transform: translateY(-10px);
+    transform: scale(0.8);
 }
 
 .btn-color2, .btn-color1:hover {
@@ -313,7 +317,6 @@ section {
 
 .btn-color2:hover {
     background: rgb(0, 0, 0);
-    transform: skewY(10px);
 }
   
 .btn-color1 {
