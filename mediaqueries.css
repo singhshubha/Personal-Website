@@ -25,7 +25,7 @@
     #profile {
         display: flex;
         justify-content: center;
-        gap: 5rem;
+        gap: 2rem;
         position: relative;
         height: 100vh; /* Full height of the viewport */
         margin-top: -170px;
@@ -64,11 +64,6 @@
         text-align: center;
     }
 
-    .about-pic {
-        width: 40%;
-        height: auto;
-    }
-
     .details-container {
         padding: 1rem;
     }
@@ -92,10 +87,10 @@
     }
 
     .socials_icon {
-        display: flex;
+        margin-top: 1rem;
         flex-wrap: wrap;
         align-items: center;
-        margin-top: 1rem;
+        margin-top: 2rem;
         gap: 1rem;
     }
     .title {
@@ -156,13 +151,19 @@
         justify-content: center;
     }
     
-
     #profile, .main-container {
-        display: block;
+        display: flex;
+        flex-direction: column;
         align-items: center;
     }
-    .profile {
-        align-items: center;
+
+    #profile {
+        display: flex;
+        justify-content: center;
+        height: 100vh; /* Full height of the viewport */
+        margin-top: -140px;
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 
     #experience, .experience-details-container {
@@ -174,18 +175,20 @@
     }
 
     .pic-container{ 
-        width: 275px;
-        height: 275px;
-        justify-content: center;
+        width: 35%;
+        height: 35%;
+        margin-top: 70px;
+        margin-bottom: 20px;
     }
 
     .contact-info-upper-container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
-        margin: 1rem auto;
+        margin: 1rem;
         padding: 0.5rem;
     }
+
 
     footer {
         height: 30vh;
@@ -205,7 +208,7 @@
     }
 
     nav {
-        flex-direction: column;
+        flex-direction: row;
         height: auto;
     }
 

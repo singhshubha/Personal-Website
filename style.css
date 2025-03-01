@@ -51,6 +51,7 @@ nav {
     flex-wrap: wrap;
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-bottom: 2rem;
 }
 
 .nav-links {
@@ -215,7 +216,7 @@ section {
 #profile {
     display: flex;
     justify-content: center;
-    gap: 5rem;
+    gap: 2rem;
     position: relative;
     height: 100vh; /* Full height of the viewport */
     margin-top: -170px;
@@ -225,6 +226,7 @@ section {
 }
 .pic-container {
     display: flex;
+    justify-content: center;
     height: 400px;
     width: 400px;
     margin: auto 0;
@@ -290,7 +292,7 @@ section {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .btn {
@@ -533,6 +535,7 @@ article .icon {
     background: linear-gradient(to top, #f0f0f0, white); /* Skin-colored fade to white */
     padding-left: 3rem;
     padding-right: 3rem;
+    padding-bottom: 3rem;
 }
 
 
