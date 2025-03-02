@@ -239,6 +239,7 @@
     .hamburger-nav {
         display: flex;
         justify-content: space-around;
+        margin: 2rem;
     }
 
     .hamburger-icon {
@@ -269,12 +270,8 @@
     }
 
     #profile {
-        display: flex;
-        justify-content: center;
-        height: 100vh; /* Full height of the viewport */
-        margin-top: -60px;
-        padding-left: 3rem;
-        padding-right: 3rem;
+        margin-top: -100px;
+
     }
 
     #about {
