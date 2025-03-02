@@ -218,7 +218,7 @@ section {
     gap: 2rem;
     position: relative;
     height: 100vh; /* Full height of the viewport */
-    margin-top: -170px;
+    margin-top: -140px;
     padding-left: 3rem;
     padding-right: 3rem;
     background: linear-gradient(to bottom, #f0f0f0, white); /* Skin-colored fade to white */
