@@ -22,17 +22,6 @@
         gap: 3rem;
     }
 
-    #profile {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        position: relative;
-        height: 100vh; /* Full height of the viewport */
-        margin-top: -230px;
-        padding-left: 3rem;
-        padding-right: 3rem;
-    }
-
     .section_text {
         text-align: center;
     }
