@@ -32,7 +32,7 @@
 
 
     #profile {
-        margin-top: -130px;
+        margin-top: -150px;
         padding-top:50px;
         
     }
@@ -201,12 +201,17 @@
 
 
 @media screen and (max-width: 450px) {
+    body {
+        font-size: 14px;
+    }
+    
     .hamburger-nav {
         display: flex;
         justify-content: space-around;
     }
+
     .logo {
-        font-size: 1.45rem;
+        font-size: 1.25rem;
     }
     .hamburger-icon {
         height: 15px;
@@ -214,9 +219,14 @@
         cursor: pointer;
       }
 
-    #profile {
-        height: 100vh; /* Full height of the viewport */
+    nav {
+        flex-direction: row;
+        height: auto;
+    }
 
+    #profile {
+        padding-top: 150px;
+        margin-bottom: 90px;
     }
 
     #contact {
@@ -236,18 +246,6 @@
 
 
 @media screen and (max-width: 400px) {
-    body {
-        font-size: 14px;
-    }
-
-    .logo {
-        font-size: 1.25rem;
-    }
-
-    .hamburger-nav {
-        display: flex;
-        justify-content: space-around;
-    }
 
     .hamburger-icon {
         height: 16px;
@@ -255,10 +253,7 @@
         cursor: pointer;
       }
 
-    nav {
-        flex-direction: row;
-        height: auto;
-    }
+
 
     .nav-links {
         flex-direction: column;
