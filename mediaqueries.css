@@ -280,9 +280,8 @@
     }
 
     #profile {
-        gap: 1rem;
+        gap: 2rem;
         margin-top: -120px;
-        padding-top: 150px;
     }
 
     #about {
