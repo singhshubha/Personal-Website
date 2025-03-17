@@ -588,3 +588,40 @@ footer p {
     opacity: 1;
 
 }
+
+
+
+
+
+
+
+/*Just for Mat-427*/
+#MAT427 {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.section_text {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.section_text1 {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    margin-bottom: 50px;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 100px;
+}
+
