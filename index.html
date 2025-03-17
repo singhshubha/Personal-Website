@@ -115,43 +115,46 @@
                 <div class="details-container project-card">
                     <div class="project-container">
                         <img src="assets/senate_voting_app.jpg" 
-                        alt="stock-calculator" 
+                        alt="Senate Voting App" 
                         class="project-img"/>
                     </div>
                     <h2 class="project-title">Senate Voting App</h2>
                     <div class="btn_container">
-                        <!-- <button class="btn btn-color1" onclick="location.href = 'https://github.com/singhshubha/Senate-Voting-System'">Open</button> -->
                         <button class="btn btn-color1" onclick="location.href = 'https://github.com/singhshubha/Senate-Voting-System'">Github</button>
                     </div>
+                    <p class="project-description">A web application designed to facilitate secure and transparent voting processes. <span class="more-text" style="display:none;">It includes features such as user authentication, vote encryption, and real-time results.</span></p>
+                    <button class="btn btn-color2 read-more-btn" onclick="toggleReadMore(this)">Read More</button>
                 </div>
                 <div class="details-container project-card">
                     <div class="project-container">
                         <img src="assets/invester_master.png" 
-                        alt="stock-calculator" 
+                        alt="Invester Master" 
                         class="project-img"/>
                     </div>
                     <h2 class="project-title">Invester Master</h2>
                     <div class="btn_container">
-                        <!-- <button class="btn btn-color1" onclick="location.href = 'https://github.com/singhshubha?tab=repositories'">Open</button> -->
                         <button class="btn btn-color1" onclick="location.href = 'https://github.com/singhshubha/InvesterMaster'">Github</button>
                     </div>
+                    <p class="project-description">An investment management tool that helps users track their investments. <span class="more-text" style="display:none;">It supports multiple asset classes and provides detailed analytics. It includes features such as portfolio tracking, risk assessment, and performance metrics.</span></p>
+                    <button class="btn btn-color2 read-more-btn" onclick="toggleReadMore(this)">Read More</button>
                 </div>
                 <div class="details-container project-card">
                     <div class="project-container">
                         <img src="assets/in-memory_search_engine.jpg" 
-                        alt="stock-calculator" 
+                        alt="In-Memory Search Engine" 
                         class="project-img"/>
                     </div>
                     <h2 class="project-title">In-Memory Search Engine</h2>
                     <div class="btn_container">
-                        <!-- <button class="btn btn-color1" onclick="location.href = 'https://github.com/singhshubha?tab=repositories'">Open</button> -->
                         <button class="btn btn-color1" onclick="location.href = 'https://github.com/singhshubha/file-search-engine'">Github</button>
                     </div>
+                    <p class="project-description">A high-performance search engine that indexes and searches documents stored in memory. <span class="more-text" style="display:none;">It is optimized for speed and efficiency, making it ideal for applications requiring fast search capabilities.</span></p>
+                    <button class="btn btn-color2 read-more-btn" onclick="toggleReadMore(this)">Read More</button>
                 </div>
                 <div class="details-container project-card">
                     <div class="project-container">
                         <img src="assets/3D_hall_diagram.png" 
-                        alt="china-internship" 
+                        alt="3D Hall Diagram" 
                         class="project-img"/>
                     </div>
                     <h2 class="project-title">3D Hall Diagram</h2>
@@ -159,11 +162,25 @@
                     <div class="btn_container">
                         <!-- <button class="btn btn-color1" onclick="location.href = 'https://github.com/singhshubha?tab=repositories'">Open</button> -->
                     </div>
+                    <p class="project-description">A 3D visualization tool for creating and exploring detailed diagrams of halls. <span class="more-text" style="display:none;">It is currently under development and will include features such as interactive navigation and customization options.</span></p>
+                    <button class="btn btn-color2 read-more-btn" onclick="toggleReadMore(this)">Read More</button>
                 </div>
-
             </div>
         </div>
     </section>
+
+    <script>
+    function toggleReadMore(button) {
+        const moreText = button.previousElementSibling.querySelector('.more-text');
+        if (moreText.style.display === 'none' || moreText.style.display === '') {
+            moreText.style.display = 'inline';
+            button.textContent = 'Minimize';
+        } else {
+            moreText.style.display = 'none';
+            button.textContent = 'Read More';
+        }
+    }
+    </script>
      <section id="experience" class="section">
         <p class = "section_text1">Get To Know </p>
         <h1 class = "title">My Experiences</h1>
