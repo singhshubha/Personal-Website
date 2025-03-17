@@ -19,7 +19,7 @@ html {
     scroll-behavior: smooth;
 }
 
-paragraph {
+.paragraph {
     color: rgb(85, 85, 85);
 }
 
@@ -218,7 +218,7 @@ section {
     gap: 4rem;
     position: relative;
     height: 100vh; /* Full height of the viewport */
-    margin-top: -140px;
+    margin-top: -170px;
     padding-left: 3rem;
     padding-right: 3rem;
     background: linear-gradient(to bottom, #f0f0f0, white); /* Skin-colored fade to white */
@@ -601,25 +601,25 @@ footer p {
     padding: 50px 20px;
 }
 
-.section_text {
+.section_text_MAT427 {
     max-width: 1000px;
     margin: 0 auto;
     margin-bottom: 30px;
 }
 
-.section_text1 {
+.section_text1_MAT427 {
     font-size: 1.2rem;
     color: #555;
 }
 
-.title {
+.title_MAT427 {
     font-size: 2.5rem;
     font-weight: bold;
     margin: 10px 0;
     margin-bottom: 50px;
 }
 
-.description {
+.description_MAT427 {
     font-size: 1.1rem;
     color: #666;
     margin-bottom: 100px;
