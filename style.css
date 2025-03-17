@@ -625,3 +625,10 @@ footer p {
     margin-bottom: 100px;
 }
 
+.btn_container_MAT427{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 12rem;
+}
+
