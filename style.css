@@ -531,7 +531,7 @@ article .icon {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 70vh;
+    height: 100vh;
     background: linear-gradient(to top, #f0f0f0, white); /* Skin-colored fade to white */
     padding-left: 3rem;
     padding-right: 3rem;
@@ -556,6 +556,23 @@ article .icon {
     margin: 1rem;
 }
 
+.contact-form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    place-items: center;
+    width: 70%;
+    height:60%;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.user-info {
+    display: flex; 
+    gap: 10px; 
+    width: 80%;
+}
 .contact-container p {
     font-size: large;
 }
