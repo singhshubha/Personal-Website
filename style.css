@@ -569,9 +569,11 @@ article .icon {
 }
 
 .user-info {
-    display: flex; 
+    display: flex;
     gap: 10px; 
-    width: 80%;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
 }
 .contact-container p {
     justify-content: center;
