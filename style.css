@@ -574,7 +574,9 @@ article .icon {
     width: 80%;
 }
 .contact-container p {
-    font-size: large;
+    justify-content: center;
+    align-self: center;
+    place-items: center;
 }
 
 .contact-icon {

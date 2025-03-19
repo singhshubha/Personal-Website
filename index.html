@@ -6,6 +6,7 @@
     <title>Shubha Swarnim Singh</title>
     <link rel="stylesheet" href="style.css"> 
     <link rel="stylesheet" href="mediaqueries.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>  
 <body>
     <nav id="desktop-nav">
@@ -18,7 +19,7 @@
                 <li><a href="#MAT427">MAT-427</a></li>
                 <li><a href="#contact ">Contact</a></li>  
             </ul>
-        </div>
+        </div> 
     </nav>
     <nav id= "hamburger-nav">
         <div class = "logo">Shubha Singh</div>
@@ -335,38 +336,40 @@
     
     
     <section id="contact" class="section">
-        <p class="section_text1">Get In Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-container">
-                <img src="assets/email.png" 
-                alt="email" 
-                class="email-icon-contact">
-                <p><a href="mailto:shubhaswarnimsingh@gmail.com">
-                    shubhaswarnimsingh@gmail.com
-                </a></p>
-            </div>
-            <div class="contact-container">
-                <img src="assets/linkedin.png" 
-                alt="linkedin" 
-                class="email-icon-contact">
-                <p><a href="https://www.linkedin.com/in/shubha-swarnim-s-9940a5211/">
-                    LinkedIn
-                </a></p>
-            </div>
+    <p class="section_text1">Get In Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+        <div class="contact-container">
+            <img src="assets/email.png" 
+            alt="email" 
+            class="email-icon-contact">
+            <p><a href="mailto:shubhaswarnimsingh@gmail.com">
+                shubhaswarnimsingh@gmail.com
+            </a></p>
         </div>
-        <div class="contact-form-container">
-            <form action="mailto:shubhaswarnimsingh@gmail.com" method="post" enctype="text/plain" style="display: flex; flex-direction: column; align-items: center;">
-                <div class="user-info">
-                    <input type="text" name="name" placeholder="Your Name" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 20px; font-family: Arial, sans-serif; margin-bottom: 10px; font-size: 16px;">
-                    <input type="email" name="email" placeholder="Your Email" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 20px; font-family: Arial, sans-serif; margin-bottom: 10px; font-size: 16px;">
-                </div>
-            <textarea name="message" rows="15" cols="100" placeholder="Send me an email" style="width: 80%; padding: 10px; border: 1px solid #ccc; border-radius: 20px; font-family: Arial, sans-serif; margin-bottom: 10px; font-size: 16px;"></textarea>
+        <div class="contact-container">
+            <img src="assets/linkedin.png" 
+            alt="linkedin" 
+            class="email-icon-contact">
+            <p><a href="https://www.linkedin.com/in/shubha-swarnim-s-9940a5211/">
+                LinkedIn
+            </a></p>
+        </div>
+    </div>
+    <div class="contact-form-container">
+        <form action="https://api.web3forms.com/submit" method="POST" style="display: flex; flex-direction: column; align-items: center;"></form>
+            <input type="hidden" name="access_key" value="d9f1025d-f4f0-4276-ae93-912744d0bf20">
+            <div class="user-info">
+                <input type="text" id="name" name="name" placeholder="Your Name" style="width:60%; padding: 10px; border: 1px solid #ccc; border-radius: 20px; font-family: Arial, sans-serif; margin-bottom: 10px; font-size: 16px;"         >
+                <input type="email" id="email" name="email" placeholder="Your Email" style="width: 60%; padding: 10px; border: 1px solid #ccc; border-radius: 20px; font-family: Arial, sans-serif; margin-bottom: 10px; font-size: 16px;">
+            </div>
+            <textarea id="message" name="message" rows="15" cols="100" placeholder="Send me an email" style="width: 60%; padding: 10px; border: 1px solid #ccc; border-radius: 20px; font-family: Arial, sans-serif; margin-bottom: 10px; font-size: 16px;"></textarea>
             <br>
             <button type="submit" class="btn btn-color1">Send</button>
-            </form>
-        </div>
-    </section>
+        </form>
+    </div>
+</section>
+
     <footer>
         <nav>
             <div class="nav-links-container">
