@@ -117,7 +117,7 @@
 
 @media screen and (max-width: 700px) {
     #contact, footer {
-        height: 40vh;
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -184,6 +184,10 @@
         padding: 0.5rem;
     }
 
+    .contact-form-container{
+        width: 180%;
+    }
+
 
     footer {
         height: 30vh;
@@ -232,6 +236,10 @@
         padding-right: 5rem;
         font-size: 0.875rem; /* Decreased font size */
     }
+
+    .contact-form-container{
+        width: 210%;
+    }
     .nav-links-container {
         display: flex;
         flex-direction: column;
@@ -265,7 +273,7 @@
     }
 
     .btn {
-        width: 100%;
+        width: 40%;
         padding: 0.5rem;
     }
     .btn_container {
