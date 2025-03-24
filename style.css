@@ -217,11 +217,14 @@ section {
     justify-content: center;
     gap: 4rem;
     position: relative;
-    height: 100vh; /* Full height of the viewport */
-    margin-top: -170px;
+    height: 100vh;
+    margin-top: -150px;
     padding-left: 3rem;
     padding-right: 3rem;
-    background: linear-gradient(to bottom, #f0f0f0, white); /* Skin-colored fade to white */
+    background: linear-gradient(to bottom, rgba(240, 240, 240, 0.5), rgba(255, 255, 255, 1)), url('./assets/main.JPG'); /* Add your image path */
+    background-size: cover; /* Ensure the image covers the section */
+    background-position: center; /* Center the image */
+    border-bottom: 1px solid white; /* Add a white border at the bottom */
 }
 .pic-container {
     display: flex;
@@ -342,7 +345,9 @@ section {
     padding-left: 3rem;
     padding-right: 3rem;
     opacity: 0;
+    height: 120vh;
     transition: opacity 1s ease-in-out;
+
 }
 
 #about.visible {
@@ -358,13 +363,20 @@ section {
 .about-details-container {
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    backdrop-filter: blur(10px); /* Blur effect for background */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
+
+
 
 .main-container {
     display: flex;
     gap: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     margin-top: 2rem;
 }
 
@@ -395,7 +407,6 @@ section {
 .details-container {
     padding: 2rem;
     flex: 1;
-    background: white;
     border-radius: 2rem;
     border: rgb(53, 53, 53) 0.1rem solid;
     text-align: center;
@@ -526,18 +537,18 @@ article .icon {
 }
 
 /*Contact*/
-
 #contact {
     display: flex;
     justify-content: center;
     flex-direction: column;
     height: 100vh;
-    background: linear-gradient(to top, #f0f0f0, white); /* Skin-colored fade to white */
+    background: linear-gradient(to top, #f0f0f0, white), url('./assets/contact-bg.jpg'); /* Skin-colored fade to white with background image */
+    background-size: cover; /* Ensure the image covers the section */
+    background-position: center; /* Center the image */
     padding-left: 3rem;
     padding-right: 3rem;
     padding-bottom: 3rem;
 }
-
 
 .contact-info-upper-container {
     display: flex;
@@ -556,25 +567,26 @@ article .icon {
     margin: 1rem;
 }
 
-.contact-form-container{
+.contact-form-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-self: center;
     place-items: center;
     width: 70%;
-    height:60%;
+    height: 60%;
     gap: 1rem;
     margin: 1rem;
 }
 
 .user-info {
     display: flex;
-    gap: 10px; 
+    gap: 10px;
     width: 90%;
     justify-content: center;
     align-items: center;
 }
+
 .contact-container p {
     justify-content: center;
     align-self: center;
@@ -589,11 +601,13 @@ article .icon {
     gap: 1rem;
 }
 
-
 /*Footer Section*/
 
 footer {
     background-color: #f0f0f0; /* Light grey background */
+    background-image: url('./assets/.jpg'); /* Add your background image path */
+    background-size: cover; /* Ensure the image covers the footer */
+    background-position: center; /* Center the image */
     color: #333; /* Darker grey for text to contrast */
     height: 30vh;
     padding-right: 3rem;
@@ -604,14 +618,9 @@ footer p {
     text-align: center;
 }
 
-
 .section.visible {
     opacity: 1;
-
 }
-
-
-
 
 
 
