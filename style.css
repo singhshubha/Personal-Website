@@ -531,7 +531,7 @@ article .icon {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 140vh;
+    height: 100vh;
     background: linear-gradient(to top, #f0f0f0, white); /* Skin-colored fade to white */
     padding-left: 3rem;
     padding-right: 3rem;

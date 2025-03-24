@@ -1,6 +1,6 @@
 @media screen and (max-width: 1400px) {
     #profile {
-        height: 80vh;
+        height: 100vh;
         margin-bottom: 5rem;
     }
 
@@ -32,8 +32,8 @@
 
 
     #profile {
-        margin-top: -170px;
-        padding-top:50px;
+        margin-top: -140px;
+        padding:50px;;
         
     }
 
