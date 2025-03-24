@@ -189,10 +189,10 @@ section {
 #profile {
     display: flex;
     justify-content: center;
-    gap: 4rem;
+    gap: 10rem;
     position: relative;
     height: 100vh;
-    margin-top: -150px;
+    margin-top: -170px;
     padding-left: 3rem;
     padding-right: 3rem;
     background: linear-gradient(to bottom, rgba(240, 240, 240, 0.5), rgba(255, 255, 255, 1)), url('./assets/main.JPG'); /* Add your image path */
@@ -335,8 +335,10 @@ section {
     margin-top: 2rem;
 }
 .about-details-container {
+    width: 80%;;
     justify-content: center;
     flex-direction: column;
+    align-self: center;
     background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
     padding: 2rem;
     border-radius: 1rem;
@@ -350,6 +352,9 @@ section {
 .main-container {
     display: flex;
     gap: 2rem;
+    align-items: center;
+    justify-content: center; /* Center align items horizontally */
+    align-self: center;
     margin-bottom: 2rem;
     margin-top: 2rem;
 }
@@ -593,9 +598,6 @@ article .icon {
 
 footer {
     background-color: #f0f0f0; /* Light grey background */
-    background-image: url('./assets/.jpg'); /* Add your background image path */
-    background-size: cover; /* Ensure the image covers the footer */
-    background-position: center; /* Center the image */
     color: #333; /* Darker grey for text to contrast */
     height: 30vh;
     padding-right: 3rem;
@@ -647,10 +649,11 @@ footer p {
     color: #666;
     margin-bottom: 100px;
 }
-
-.btn_container_MAT427{
+.btn_container_MAT427 {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center; 
     gap: 1rem;
     margin-bottom: 12rem;
 }
