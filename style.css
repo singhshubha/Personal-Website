@@ -651,10 +651,11 @@ footer p {
 }
 .btn_container_MAT427 {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center; 
+    justify-content: center;
     gap: 1rem;
     margin-bottom: 12rem;
 }
+
 
