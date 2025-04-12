@@ -7,31 +7,19 @@ format:
     embed-resources: true
 ---
 
-This is a dataset that i used while i took CSC Data Visualization. i have followed up with few models to predict the number of streams for each song in the test dataset based on the features: Danceability, Energy, Loudness, Speechiness, Acousticness, and Duration_min. I goggled a little bit about how we can create a perfect model for this kind of dataset. One way was to LASSO and use a Linear regression after was the answer. It was because LASSO reduces the complexity of the model if we have different variables and Linear regression uses ht best impacting variable to predict the model. After then i also used Linear gradient model and compared it with the previous one and used the best one on test set.
-
-# Libraries
-
-Installing all the necessary libraries for my project.
-
-```{r}
-library(readr)
-library(dplyr)
-library(knitr)
-library(tidyverse)
-library(tidymodels)
-library(caret)
-library(ISLR2)
-library(readODS)
-library(ggrepel)
-library(glmnet)
-
-tidymodels_prefer()
-```
+This is a dataset that i used while i took CSC Data Visualization. I have followed up with few models to predict the number of streams for each song in the test dataset based on the features: Danceability, Energy, Loudness, Speechiness, Acousticness, and Duration_min. I goggled a little bit about how we can create a perfect model for this kind of dataset. One way was to LASSO and use a Linear regression after was the answer. It was because LASSO reduces the complexity of the model if we have different variables and Linear regression uses ht best impacting variable to predict the model. After then i also used Linear gradient model and compared it with the previous one and used the best one on test set. This is an example of one of the reports that i have done which i would like to be considered in my application for the job as well.
 
 # Introduction
 
-I took the Spotify data set for my final project. The data set provides details on several tracks by the artists, featuring columns like "Artist," "Track," "Album," and numeric values reflecting characteristics of each song. Notably, the dataset includes attributes such as dance ability, energy, loudness, speechiness, acoustics, and duration. Each row corresponds to a specific track, with associated quantitative metrics offering insights into the musical features of different songs.\
-The variables used in this dataset are:
+For this project, I selected a Spotify dataset to explore and model as the final submission for CSC Data Visualization. Music resonated strongly with many students during our class introductions, making it an ideal and engaging subject for predictive modeling.
+
+The data set provides details on several tracks by the artists, featuring columns like "Artist," "Track," "Album," and numeric values reflecting characteristics of each song. Notably, the dataset includes attributes such as dance ability, energy, loudness, speechiness, acoustics, and duration. Each row corresponds to a specific track, with associated quantitative metrics offering insights into the musical features of different songs.
+
+\
+
+## Dataset Overview
+
+The dataset includes various Spotify tracks, with features such as:
 
 -   **Artist**: The name of the musician or band that performed the track.
 
@@ -81,9 +69,46 @@ The variables used in this dataset are:
 
 -   **Most_playedon**: The platform where the track has been played the most.
 
-The reason for me to choose this project was because a lot of us in the intro presentation wrote about music history and what kind of music we love. Therefore, I thought it would be an interesting topic to show to the class because most of us will be actively engaged throughout the presentation process. The first problem that I had was the space. the file was over 5 MB, and R Studio does not allow any files larger than 5 MB. Therefore, I had to manually remove some of the unwanted columns from the data set before I loaded it into the server. Here, Unwanted columns are those which do not contribute to the graph like acoustics of the song or time duration of the song.
+Variables with excessive missing values or no predictive value were removed.
 
-## Data processing
+# Objective
+
+The primary goal is to **predict the number of streams for a song** based on selected audio and metadata features. This will be done using two primary regression models:
+
+-   **LASSO Regression**
+
+-   **Multiple Linear Regression**
+
+In addition, a manual implementation of **gradient descent optimization** is included to demonstrate the underlying mechanics of how linear regression parameters can be estimated through iterative techniques. While gradient descent is not a distinct model itself, it offers valuable educational insight.
+
+Each model is evaluated based on prediction performance, and plots are analyzed to interpret results and assess modeling assumptions.
+
+# Libraries
+
+First, we load the required libraries that will help us process data, visualize patterns, and build models.
+
+```{r}
+# Using suppresspackagestartupmessages to suppress all the comments for easy readability. 
+suppressPackageStartupMessages({
+  library(readr)
+  library(dplyr)
+  library(knitr)
+  library(tidyverse)
+  library(tidymodels)
+  library(caret)
+  library(ISLR2)
+  library(readODS)
+  library(ggrepel)
+  library(glmnet)
+})
+
+tidymodels_prefer()
+
+```
+
+# Data processing
+
+We read the dataset, drop missing values, and remove columns with zero variance to simplify modeling.
 
 ```{r}
 #reading the data set
@@ -107,6 +132,10 @@ head(spotify_data)
 
 The wrangling process is done. Everything has been cleared and it is ready to be used for data analysis. the dataset now can be used in interpreting and visualizing graphs.
 
+## Distribution of Danceability
+
+This histogram shows that most tracks have danceability scores between 0.5 and 0.8, indicating moderately high suitability for dancing.
+
 Now, we are visualizing the graph that will provide people with appropriate information and they can learn from it too. This graph represents the danceability of songs which means if the dance can be danced into or not. A histogram with the frequency of dance abilities will show how many songs on Spotify can be danced into. We do this to visualize a variable used from the dataset.
 
 ```{r}
@@ -117,6 +146,8 @@ ggplot(spotify_data, aes(x = Danceability)) +
   theme_minimal()
 
 ```
+
+This right-skewed shape suggests that most songs in the dataset are moderately to highly danceable, which could be an influential predictor for streaming performance. Understanding this distribution helps in assessing the potential linearity of relationships when building regression models. This is just for the visualization process so we can know the nature of the dataset.
 
 ## Data Splitting
 
@@ -130,6 +161,10 @@ spotify_split <- initial_split(spotify_data, prop = 0.75, strata = Stream)
 spotify_train <- training(spotify_split)
 spotify_test <- testing(spotify_split)
 ```
+
+# Our Model
+
+Since i mentioned at the beginning that the one of the best ways to model this dataset was to LASSO at the beginning and use multiple linear regression. We will do so by following:
 
 ## Lasso Regression
 
@@ -151,29 +186,42 @@ selected_features <- coef(lasso_model, s = best_lambda)
 selected_features
 ```
 
+The LASSO regression revealed that Danceability (+3.8M) and Loudness (+8.5M) positively influence Spotify stream counts, suggesting that upbeat and audibly engaging tracks are more popular. In contrast, Energy (–16.7M), Speechiness (–73.9M), and Acousticness (–87.6M) negatively impact streams, indicating that highly energetic, talk-heavy, or acoustic songs may receive fewer plays. Duration also showed a slight negative effect (–1.1M), implying shorter songs may perform better. Overall, LASSO effectively reduced model complexity while highlighting the most influential features for predicting track popularity on Spotify.
+
 ## Multiple Linear Regression
 
+Using features selected from LASSO, we fit a multiple linear regression model.
+
 ```{r}
-# Extract selected features
-selected_features <- c("Danceability", "Energy", "Loudness", "Speechiness", "Acousticness", "Duration_min")
+# Extract selected features based on LASSO results
+selected_features <- c("Danceability", "Loudness", "Duration_min")
 
 # Build the formula for the linear model
 formula <- as.formula(paste("Stream ~", paste(selected_features, collapse = " + ")))
 
 # Fit the Multiple Linear Regression model
 linear_model <- lm(formula, data = spotify_train)
+
+# Plot diagnostics for the model
 plot(linear_model)
 
-# Summary of the model
-summary(linear_model)
-plot(linear_model)
-# Predict on test data
-linear_predictions <- predict(linear_model, newdata = spotify_test)
 
 
 ```
 
-### Model Evaluation
+These diagnostic plots reveal some issues with the regression model. The residuals (errors) are not spread evenly and tend to increase with higher fitted values, suggesting heteroscedasticity. The Q-Q plot shows that the residuals deviate from a normal distribution, and the residuals vs. leverage plot indicates a few influential points that may be distorting the model. Despite these imperfections, we are still using the model because it captures the main trends in the data and performs reasonably well for our current objectives. Such issues are common in real-world datasets, and the model’s interpretability and efficiency make it valuable for decision-making, especially when the goal is to gain general insights rather than perfect predictions.
+
+```{r}
+# Summary of the model
+summary(linear_model)
+
+# Predict on test data
+linear_predictions <- predict(linear_model, newdata = spotify_test)
+```
+
+The linear regression model on the `spotify_train` dataset is statistically significant overall but has a very low R-squared value (0.01587), indicating poor explanatory power. `Danceability` and `Loudness` are significant predictors with positive effects on the response variable, while `Duration_min` is not statistically significant. The large residuals suggest high variability in predictions, implying that important factors may be missing from the model. Overall, the model fits poorly despite the statistical significance of some predictors.
+
+## Model Evaluation
 
 We used variable stream as we are trying to find the number of streams for each song in the test dataset based on the features: Danceability, Energy, Loudness, Speechiness, Acousticness, and Duration_min.
 
@@ -183,9 +231,9 @@ linear_rmse <- sqrt(mean((linear_predictions - spotify_test$Stream)^2))
 linear_rmse
 ```
 
-## Gradient Descent
+# Gradient Descent
 
-Since we have one model ready, lets compare that with the Gradient Descent. We will choose the best one after we process this and whichever is the best one, we will use to it fit in test set and predict.
+Gradient descent is presented as a manual optimization technique for linear regression. While `lm()` optimizes parameters automatically, this section illustrates how weights can be learned iteratively.
 
 ```{r}
 # Gradient Descent Function
@@ -222,9 +270,11 @@ cost_history <- result$cost_history
 plot(cost_history, type = "l", col = "blue", xlab = "Iterations", ylab = "Cost", main = "Cost Function History")
 ```
 
-### Model Evaluation
+This plot shows how the model improved over time. At the beginning, the errors were very large, but as the model learned, the errors dropped quickly. After about 200 steps, the improvements slowed down and leveled off. This means the model found the best possible fit to the data using the features we gave it.
 
-We used variable stream as we are trying to find the number of streams for each song in the test dataset based on the features: Danceability, Energy, Loudness, Speechiness, Acousticness, and Duration_min.
+## Model Evaluation
+
+While useful for understanding optimization, this approach does not outperform the regression model fitted using `lm()`. We used variable stream as we are trying to find the number of streams for each song in the test dataset based on the features: Danceability, Energy, Loudness, Speechiness, Acousticness, and Duration_min.
 
 ```{r}
 # Prepare the test data
@@ -239,7 +289,7 @@ gradient_rmse <- sqrt(mean((predictions - y_test)^2))
 gradient_rmse 
 ```
 
-## Prediction
+# Prediction
 
 The linear regression model after LASSO has a slightly lower error compared to the linear gradient model on the training set. This suggests that, on the training data, the linear model fits slightly better.
 
@@ -258,9 +308,9 @@ results <- data.frame(Track = spotify_test$Track, Predicted_Streams = predicted_
 # print(results) Commented out because the results are too long
 ```
 
-### Plotting the predicted information
+## Plotting the predicted information
 
-Here we plot the information from above. since there are a lot fo entries we will only plot the top 10 to get the gist of the predicted values.
+Predictions from the linear regression model were collected and paired with the corresponding track names from the test set. A new dataframe combined predicted stream counts with song metadata, allowing for easier interpretation of the results. The top 10 tracks with the highest predicted stream counts were identified and plotted using a bar graph. This visualization highlighted the songs that the model believed would perform best based on their audio features.
 
 ```{r}
 results <- data.frame(Track = spotify_test$Track, Predicted_Streams = predicted_streams)
@@ -275,8 +325,10 @@ ggplot(top_10_results, aes(x = reorder(Track, -Predicted_Streams), y = Predicted
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
+\
+\
 Since we split the data, the full dataset contains only a limited number of songs in the test set, which could lead to inaccurate results. However, the model's behavior remains the same.
 
-##  Resource
+# Resource
 
 Citations: <https://www.kaggle.com/datasets/sanjanchaudhari/spotify-dataset>\
