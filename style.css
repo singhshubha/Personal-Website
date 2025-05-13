@@ -614,48 +614,4 @@ footer p {
 
 
 
-/*Just for Mat-427*/
-#MAT427 {
-    text-align: center;
-    padding: 50px 20px;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-#MAT427.visible {
-    opacity: 1;
-}
-
-.section_text_MAT427 {
-    max-width: 1000px;
-    margin: 0 auto;
-    margin-bottom: 30px;
-}
-
-.section_text1_MAT427 {
-    font-size: 1.2rem;
-    color: #555;
-}
-
-.title_MAT427 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin: 10px 0;
-    margin-bottom: 50px;
-}
-
-.description_MAT427 {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 100px;
-}
-.btn_container_MAT427 {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center; 
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 12rem;
-}
-
 
