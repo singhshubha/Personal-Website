@@ -319,7 +319,7 @@ section {
     padding-left: 3rem;
     padding-right: 3rem;
     opacity: 0;
-    height: 120vh;
+    height: 100vh;
     transition: opacity 1s ease-in-out;
 
 }
