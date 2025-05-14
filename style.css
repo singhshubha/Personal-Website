@@ -304,6 +304,7 @@ section {
   
 .btn-color1:hover {
     border: rgb(0, 0, 0) 0.1rem solid;
+    color: rgb(0, 0, 0);
 }
   
 .btn_container {
