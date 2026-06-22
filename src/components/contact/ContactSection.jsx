@@ -1,38 +1,6 @@
-import { useState, useRef, useMemo, Suspense } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
+import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { personal } from '../../data/content'
-
-// ─── Floating particles background ───────────────────────────────────────────
-function ContactParticles() {
-  const ref = useRef()
-  const { positions } = useMemo(() => {
-    const count = 30
-    const positions = new Float32Array(count * 3)
-    for (let i = 0; i < count; i++) {
-      positions[i*3]   = (Math.random() - 0.5) * 14
-      positions[i*3+1] = (Math.random() - 0.5) * 10
-      positions[i*3+2] = (Math.random() - 0.5) * 6
-    }
-    return { positions }
-  }, [])
-
-  useFrame(({ clock }) => {
-    if (ref.current) {
-      ref.current.rotation.y = clock.getElapsedTime() * 0.04
-      ref.current.rotation.x = Math.sin(clock.getElapsedTime() * 0.03) * 0.15
-    }
-  })
-
-  return (
-    <points ref={ref}>
-      <bufferGeometry>
-        <bufferAttribute attach="attributes-position" count={30} array={positions} itemSize={3} />
-      </bufferGeometry>
-      <pointsMaterial size={0.12} color="#3b82f6" transparent opacity={0.5} />
-    </points>
-  )
-}
 
 // ─── Contact links data ────────────────────────────────────────────────────────
 const CONTACT_LINKS = [
@@ -175,22 +143,8 @@ function ContactForm() {
 // ─── Main export ──────────────────────────────────────────────────────────────
 export default function ContactSection() {
   return (
-    <section id="contact" className="section" style={{ position: 'relative', overflow: 'hidden' }}>
-      {/* Subtle Three.js background */}
-      <div style={{ position: 'absolute', inset: 0, zIndex: 0, opacity: 0.6, pointerEvents: 'none' }}>
-        <Canvas
-          camera={{ position: [0, 0, 10], fov: 60 }}
-          dpr={[1, 1]}
-          gl={{ antialias: false, alpha: true }}
-          style={{ background: 'transparent' }}
-        >
-          <Suspense fallback={null}>
-            <ContactParticles />
-          </Suspense>
-        </Canvas>
-      </div>
-
-      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+    <section id="contact" className="section">
+      <div className="container">
         <motion.div
           style={{ textAlign: 'center', marginBottom: 64 }}
           initial={{ opacity: 0, y: 30 }}

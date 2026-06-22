@@ -1,5 +1,4 @@
-import { useRef, useState, useEffect, useMemo } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { personal } from '../../data/content'
 
@@ -37,136 +36,10 @@ function TypeWriter({ titles }) {
   )
 }
 
-// ─── Three.js neural network ──────────────────────────────────────────────────
-const PARTICLE_COUNT = typeof window !== 'undefined' && window.innerWidth < 768 ? 45 : 85
-const MAX_DIST       = 4.2
-const HALF_W         = 11
-const HALF_H         = 7
-
-function NeuralNet() {
-  const pointsRef = useRef()
-  const linesRef  = useRef()
-
-  const { positions, velocities, lineBuffer } = useMemo(() => {
-    const positions = new Float32Array(PARTICLE_COUNT * 3)
-    const velocities = new Float32Array(PARTICLE_COUNT * 3)
-    for (let i = 0; i < PARTICLE_COUNT; i++) {
-      positions[i * 3]     = (Math.random() - 0.5) * HALF_W * 2
-      positions[i * 3 + 1] = (Math.random() - 0.5) * HALF_H * 2
-      positions[i * 3 + 2] = (Math.random() - 0.5) * 8
-      velocities[i * 3]     = (Math.random() - 0.5) * 0.012
-      velocities[i * 3 + 1] = (Math.random() - 0.5) * 0.012
-      velocities[i * 3 + 2] = (Math.random() - 0.5) * 0.006
-    }
-    return {
-      positions,
-      velocities,
-      lineBuffer: new Float32Array(PARTICLE_COUNT * PARTICLE_COUNT * 6),
-    }
-  }, [])
-
-  useFrame(({ mouse, camera }) => {
-    if (!pointsRef.current || !linesRef.current) return
-
-    const pos = pointsRef.current.geometry.attributes.position.array
-
-    for (let i = 0; i < PARTICLE_COUNT; i++) {
-      pos[i * 3]     += velocities[i * 3]
-      pos[i * 3 + 1] += velocities[i * 3 + 1]
-      pos[i * 3 + 2] += velocities[i * 3 + 2]
-      if (Math.abs(pos[i * 3])     > HALF_W) velocities[i * 3]     *= -1
-      if (Math.abs(pos[i * 3 + 1]) > HALF_H) velocities[i * 3 + 1] *= -1
-      if (Math.abs(pos[i * 3 + 2]) > 4)      velocities[i * 3 + 2] *= -1
-    }
-    pointsRef.current.geometry.attributes.position.needsUpdate = true
-
-    let lineCount = 0
-    const maxD2 = MAX_DIST * MAX_DIST
-    for (let i = 0; i < PARTICLE_COUNT; i++) {
-      for (let j = i + 1; j < PARTICLE_COUNT; j++) {
-        const dx = pos[i*3]   - pos[j*3]
-        const dy = pos[i*3+1] - pos[j*3+1]
-        const dz = pos[i*3+2] - pos[j*3+2]
-        if (dx*dx + dy*dy + dz*dz < maxD2) {
-          lineBuffer[lineCount*6]     = pos[i*3];   lineBuffer[lineCount*6+1] = pos[i*3+1]; lineBuffer[lineCount*6+2] = pos[i*3+2]
-          lineBuffer[lineCount*6+3]   = pos[j*3];   lineBuffer[lineCount*6+4] = pos[j*3+1]; lineBuffer[lineCount*6+5] = pos[j*3+2]
-          lineCount++
-        }
-      }
-    }
-
-    const lineGeo = linesRef.current.geometry
-    lineGeo.setDrawRange(0, lineCount * 2)
-    lineGeo.attributes.position.array.set(lineBuffer)
-    lineGeo.attributes.position.needsUpdate = true
-
-    // Smooth mouse parallax on camera
-    camera.position.x += (mouse.x * 2 - camera.position.x) * 0.025
-    camera.position.y += (mouse.y * 1.5 - camera.position.y) * 0.025
-    camera.lookAt(0, 0, 0)
-  })
-
-  const linePositionArray = useMemo(
-    () => new Float32Array(PARTICLE_COUNT * PARTICLE_COUNT * 6),
-    []
-  )
-
-  return (
-    <>
-      <points ref={pointsRef}>
-        <bufferGeometry>
-          <bufferAttribute
-            attach="attributes-position"
-            count={PARTICLE_COUNT}
-            array={positions}
-            itemSize={3}
-          />
-        </bufferGeometry>
-        <pointsMaterial
-          size={0.13}
-          color="#60a5fa"
-          transparent
-          opacity={0.88}
-          sizeAttenuation
-        />
-      </points>
-
-      <lineSegments ref={linesRef}>
-        <bufferGeometry>
-          <bufferAttribute
-            attach="attributes-position"
-            count={PARTICLE_COUNT * PARTICLE_COUNT}
-            array={linePositionArray}
-            itemSize={3}
-          />
-        </bufferGeometry>
-        <lineBasicMaterial color="#3b82f6" transparent opacity={0.22} />
-      </lineSegments>
-    </>
-  )
-}
-
-function NeuralNetCanvas() {
-  return (
-    <Canvas
-      camera={{ position: [0, 0, 14], fov: 65 }}
-      dpr={[1, 1.5]}
-      gl={{ antialias: true, alpha: true }}
-      style={{ background: 'transparent' }}
-    >
-      <ambientLight intensity={0.3} />
-      <NeuralNet />
-    </Canvas>
-  )
-}
-
 // ─── Hero section ─────────────────────────────────────────────────────────────
 export default function HeroSection() {
   return (
     <section className="hero" id="hero">
-      <div className="hero-canvas">
-        <NeuralNetCanvas />
-      </div>
       <div className="hero-gradient" />
 
       <div className="hero-content">

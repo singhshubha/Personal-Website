@@ -11,26 +11,47 @@ export const personal = {
   location: 'Boise, Idaho',
 }
 
-export const skills = [
-  // Programming & Development — color group: blue
-  { name: 'Python',      category: 'dev',  level: 'Experienced', proficiency: 90, color: '#3b82f6' },
-  { name: 'JavaScript',  category: 'dev',  level: 'Experienced', proficiency: 88, color: '#2563eb' },
-  { name: 'SQL',         category: 'dev',  level: 'Intermediate', proficiency: 72, color: '#60a5fa' },
-  { name: 'Node.js',     category: 'dev',  level: 'Intermediate', proficiency: 68, color: '#1d4ed8' },
-  { name: 'Express',     category: 'dev',  level: 'Intermediate', proficiency: 65, color: '#3b82f6' },
-  { name: 'Flask',       category: 'dev',  level: 'Intermediate', proficiency: 65, color: '#2563eb' },
-  { name: 'HTML/CSS',    category: 'dev',  level: 'Intermediate', proficiency: 74, color: '#60a5fa' },
-  { name: 'WebSocket',   category: 'dev',  level: 'Intermediate', proficiency: 62, color: '#1d4ed8' },
-  { name: 'Bootstrap',   category: 'dev',  level: 'Intermediate', proficiency: 65, color: '#3b82f6' },
-  // Data Science & ML — color group: purple
-  { name: 'XGBoost',       category: 'ml', level: 'Experienced',  proficiency: 85, color: '#7c3aed' },
-  { name: 'Random Forest', category: 'ml', level: 'Experienced',  proficiency: 85, color: '#8b5cf6' },
-  { name: 'Scikit-learn',  category: 'ml', level: 'Intermediate', proficiency: 75, color: '#6d28d9' },
-  { name: 'Pandas',        category: 'ml', level: 'Intermediate', proficiency: 78, color: '#7c3aed' },
-  { name: 'NumPy',         category: 'ml', level: 'Intermediate', proficiency: 76, color: '#8b5cf6' },
-  { name: 'K-Means',       category: 'ml', level: 'Intermediate', proficiency: 68, color: '#6d28d9' },
-  { name: 'SHAP',          category: 'ml', level: 'Intermediate', proficiency: 65, color: '#7c3aed' },
-  { name: 'AngularJS',     category: 'ml', level: 'Intermediate', proficiency: 60, color: '#8b5cf6' },
+export const skillGroups = [
+  {
+    id:    'languages',
+    label: 'Languages',
+    color: '#c9883a',
+    items: [
+      { name: 'Python',     proficiency: 90, level: 'Experienced'  },
+      { name: 'JavaScript', proficiency: 88, level: 'Experienced'  },
+      { name: 'R',          proficiency: 70, level: 'Intermediate' },
+      { name: 'React',      proficiency: 72, level: 'Intermediate' },
+      { name: 'SQL',        proficiency: 72, level: 'Intermediate' },
+    ],
+  },
+  {
+    id:    'web',
+    label: 'Web & Frameworks',
+    color: '#9b6620',
+    items: [
+      { name: 'HTML / CSS', proficiency: 74, level: 'Intermediate' },
+      { name: 'Node.js',    proficiency: 68, level: 'Intermediate' },
+      { name: 'Express',    proficiency: 65, level: 'Intermediate' },
+      { name: 'Flask',      proficiency: 65, level: 'Intermediate' },
+      { name: 'Bootstrap',  proficiency: 65, level: 'Intermediate' },
+      { name: 'AngularJS',  proficiency: 60, level: 'Intermediate' },
+      { name: 'WebSocket',  proficiency: 62, level: 'Intermediate' },
+    ],
+  },
+  {
+    id:    'data',
+    label: 'Data & AI',
+    color: '#b07830',
+    items: [
+      { name: 'Pandas',        proficiency: 78, level: 'Intermediate' },
+      { name: 'NumPy',         proficiency: 76, level: 'Intermediate' },
+      { name: 'Scikit-learn',  proficiency: 75, level: 'Intermediate' },
+      { name: 'XGBoost',       proficiency: 85, level: 'Experienced'  },
+      { name: 'Random Forest', proficiency: 85, level: 'Experienced'  },
+      { name: 'K-Means',       proficiency: 68, level: 'Intermediate' },
+      { name: 'SHAP',          proficiency: 65, level: 'Intermediate' },
+    ],
+  },
 ]
 
 export const projects = [
