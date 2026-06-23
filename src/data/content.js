@@ -107,74 +107,47 @@ export const projects = [
 
 export const experience = [
   {
-    role: 'President',
-    organization: 'Sigma Chi Fraternity',
-    period: '2024 – Present',
-    type: 'leadership',
-    icon: '🏛️',
+    role: 'Data Science & Analytics Intern',
+    organization: 'Albertsons Companies',
+    period: 'Jun 2025 – Aug 2025',
+    type: 'work',
+    icon: '📊',
     description:
-      'Leading one of the most prestigious fraternities at the College of Idaho. Overseeing chapter operations, member development programs, community service initiatives, and inter-fraternal relations.',
+      'Designed and deployed ML infrastructure using Python, Scikit-learn, and XGBoost to predict store profitability across 2,200+ locations, supporting $700M+ CAPEX allocation decisions. Built scalable data pipelines and reduced analysis latency by 87.5% through query and workflow optimization.',
   },
   {
-    role: 'Student Hall Director',
-    organization: 'College of Idaho Residence Life',
-    period: '2023 – Present',
+    role: 'IT Intern',
+    organization: 'The College of Idaho',
+    period: 'Dec 2022 – May 2023',
+    type: 'work',
+    icon: '🖥️',
+    description:
+      'Managed relational databases with over 1 million records, optimized SQL queries for institutional analytics, and deployed Multi-Factor Authentication (MFA) for 1,000+ users to strengthen campus-wide security.',
+  },
+  {
+    role: 'Student Hall Director and RA',
+    organization: 'The College of Idaho Residence Life',
+    period: 'August 2023 – May 2026',
     type: 'leadership',
     icon: '🏠',
     description:
-      'Managing residential hall operations for 80+ students. Fostering a supportive community, coordinating programming events, mediating conflicts, and supporting student well-being.',
+      'Lead residential operations for 200+ students, fostering an inclusive community through mentorship, conflict resolution, crisis response, and educational programming.',
   },
   {
-    role: 'Environmental Engineering Intern',
-    organization: 'Micron Technology',
-    period: 'Summer 2024',
-    type: 'professional',
-    icon: '💼',
-    description:
-      'Worked on environmental data analysis and sustainability engineering solutions at a leading global semiconductor company. Applied data-driven methods to track and reduce environmental impact.',
-  },
-  {
-    role: 'Treasurer',
-    organization: 'Coding Club',
-    period: '2023 – 2024',
+    role: 'ASCI Treasurer',
+    organization: 'Associated Students of The College of Idaho',
+    period: 'August 2024 – May2025',
     type: 'leadership',
-    icon: '💻',
+    icon: '💰',
     description:
-      'Managed club finances, allocated resources for workshops and hackathon participation, and helped grow membership by organizing technical talks and hands-on coding events.',
-  },
-  {
-    role: 'ASCI Representative',
-    organization: 'Associated Students of College of Idaho',
-    period: '2022 – Present',
-    type: 'leadership',
-    icon: '🎓',
-    description:
-      'Representing student interests in campus government. Participating in policy decisions, budget allocations, and campus improvement initiatives that impact the student body.',
-  },
-  {
-    role: 'President',
-    organization: 'Boxing Club',
-    period: '2022 – 2023',
-    type: 'leadership',
-    icon: '🥊',
-    description:
-      'Co-founded and led the college boxing club from the ground up. Organized weekly training sessions, sparring events, and inter-collegiate matches, growing membership to 30+ students.',
-  },
-  {
-    role: 'Leadership Role',
-    organization: 'Amnesty International',
-    period: '2022 – 2023',
-    type: 'leadership',
-    icon: '✊',
-    description:
-      "Advocated for human rights and social justice. Organized awareness campaigns, letter-writing drives, and community outreach events to support Amnesty International's global mission.",
-  },
+      'Managed a $100,000+ student government budget, oversee funding allocations, and promoted financial transparency while collaborating with campus leadership on strategic initiatives.',
+  }
 ]
 
 export const education = [
   {
     school: 'College of Idaho',
-    degree: 'B.S. Computer Science & Business Administration',
+    degree: 'B.S. Computer Science & Mathematics, B.S. Business Administration',
     note: 'Double Major',
     period: '2022 – 2025',
     location: 'Caldwell, Idaho',
@@ -182,19 +155,24 @@ export const education = [
     coursework: [
       'Data Structures & Algorithms',
       'Machine Learning',
+      'Programming Languages',
+      'Statistics & Probability',
+      'Database Systems', 
       'Data Visualization',
-      'Software Engineering',
-      'Database Systems',
-      'Business Strategy',
     ],
   },
   {
     school: 'Kathmandu Model College',
-    degree: 'High School Diploma',
-    note: '',
-    period: '2019 – 2022',
+    degree: 'NEB +2 Science',
+    note: 'High School Diploma',
+    period: '2019 – 2021',
     location: 'Kathmandu, Nepal',
     gpa: '',
-    coursework: [],
+    coursework: [
+      'Physics',
+      'Chemistry',
+      'Mathematics',
+      'Computer Science',
+    ],
   },
 ]

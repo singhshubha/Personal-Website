@@ -1,8 +1,9 @@
 import { Suspense, lazy } from 'react'
-import Navbar          from './components/Navbar'
-import ScrollProgress  from './components/ScrollProgress'
-import HeroSection     from './components/hero/HeroSection'
-import WaveBackground  from './components/WaveBackground'
+import Navbar                from './components/Navbar'
+import ScrollProgress        from './components/ScrollProgress'
+import HeroSection           from './components/hero/HeroSection'
+import WaveBackground        from './components/WaveBackground'
+import StickyPhotoSidebar   from './components/StickyPhotoSidebar'
 
 // Lazy-load below-fold sections for faster initial load
 const AboutSection      = lazy(() => import('./components/about/AboutSection'))
@@ -62,6 +63,7 @@ export default function App() {
       <WaveBackground />
       <ScrollProgress />
       <Navbar />
+      <StickyPhotoSidebar />
 
       <main>
         <HeroSection />

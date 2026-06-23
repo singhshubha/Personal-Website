@@ -36,8 +36,24 @@ function TypeWriter({ titles }) {
   )
 }
 
+const PHOTOS = [
+  { src: '/assets/main-pic-1.png', pos: '58% 50%', size: '180%' },
+  { src: '/assets/main-pic-2.png', pos: '47% 50%', size: '175%' },
+  { src: '/assets/main-pic-3.png', pos: '55% 50%', size: '170%' },
+  { src: '/assets/main-pic-4.png', pos: '42% 50%', size: '182%' },
+]
+const INTERVAL = 2800
+
 // ─── Hero section ─────────────────────────────────────────────────────────────
 export default function HeroSection() {
+  const [active, setActive] = useState(0)
+
+  // Auto-advance
+  useEffect(() => {
+    const id = setInterval(() => setActive(i => (i + 1) % PHOTOS.length), INTERVAL)
+    return () => clearInterval(id)
+  }, [])
+
   return (
     <section className="hero" id="hero">
       <div className="hero-gradient" />
@@ -49,7 +65,15 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <div className="hero-avatar-wrap">
-            <img src="/assets/main-pic.png" alt="Shubha Singh" className="hero-avatar" />
+            {PHOTOS.map(({ src, pos, size }, i) => (
+              <div
+                key={src}
+                role="img"
+                aria-label="Shubha Singh"
+                className={`hero-avatar${i === active ? ' active' : ''}`}
+                style={{ backgroundImage: `url(${src})`, backgroundPosition: pos, backgroundSize: size }}
+              />
+            ))}
           </div>
           <p style={{ fontSize: '1rem', color: 'var(--text-muted)', marginBottom: '0.35rem', fontWeight: 500 }}>
             Hello, I'm
@@ -69,14 +93,7 @@ export default function HeroSection() {
           <TypeWriter titles={personal.titles} />
         </motion.div>
 
-        <motion.p
-          className="hero-bio"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.45 }}
-        >
-          Exploring the intersection of Artificial Intelligence, Machine Learning, Software Engineering, and Data. From developing intelligent models to creating scalable applications, I enjoy transforming complex challenges into elegant solutions.
-        </motion.p>
+        
 
         <motion.div
           className="hero-actions"

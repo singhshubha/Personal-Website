@@ -14,7 +14,7 @@ const stats = [
   { num: '7+',  label: 'Leadership Roles' },
 ]
 
-const badges = ['CS & Business', 'Data Science', 'Full-Stack Dev', 'ML & AI', 'Student Leader']
+const badges = ['CS & Business', 'Data Science', 'ML & AI']
 
 export default function AboutSection() {
   return (
