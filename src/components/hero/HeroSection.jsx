@@ -37,7 +37,7 @@ function TypeWriter({ titles }) {
 }
 
 const PHOTOS = [
-  { src: '/assets/main-pic-1.png', pos: '58% 50%', size: '180%' },
+  { src: '/assets/main-pic-1.png', pos: '58% 100%', size: '170%' },
   { src: '/assets/main-pic-2.png', pos: '47% 50%', size: '175%' },
   { src: '/assets/main-pic-3.png', pos: '55% 50%', size: '170%' },
   { src: '/assets/main-pic-4.png', pos: '42% 50%', size: '182%' },
