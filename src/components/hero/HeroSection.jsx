@@ -36,11 +36,13 @@ function TypeWriter({ titles }) {
   )
 }
 
+// pos:  'X% Y%'  — X moves left(0%) ↔ right(100%), Y moves up(0%) ↔ down(100%)
+// size: '100%' = fit, '150%' = zoom in, '80%' = zoom out
 const PHOTOS = [
-  { src: '/assets/main-pic-1.png', pos: '58% 100%', size: '170%' },
-  { src: '/assets/main-pic-2.png', pos: '47% 50%', size: '175%' },
-  { src: '/assets/main-pic-3.png', pos: '55% 50%', size: '170%' },
-  { src: '/assets/main-pic-4.png', pos: '42% 50%', size: '182%' },
+  { src: '/assets/main-pic-1.png', pos: '55% 57%', size: '250%' },
+  { src: '/assets/main-pic-2.png', pos: '55% 57%', size: '250%' },
+  { src: '/assets/main-pic-3.png', pos: '55% 57%', size: '250%' },
+  { src: '/assets/main-pic-4.png', pos: '55% 57%', size: '250%' },
 ]
 const INTERVAL = 2800
 
@@ -48,7 +50,6 @@ const INTERVAL = 2800
 export default function HeroSection() {
   const [active, setActive] = useState(0)
 
-  // Auto-advance
   useEffect(() => {
     const id = setInterval(() => setActive(i => (i + 1) % PHOTOS.length), INTERVAL)
     return () => clearInterval(id)
@@ -92,8 +93,6 @@ export default function HeroSection() {
         >
           <TypeWriter titles={personal.titles} />
         </motion.div>
-
-        
 
         <motion.div
           className="hero-actions"
