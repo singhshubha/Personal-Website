@@ -36,7 +36,10 @@ export default function Navbar() {
   const [active,   setActive]   = useState('')
   const [menuOpen, setMenuOpen] = useState(false)
   const [dark,     setDark]     = useState(
-    () => localStorage.getItem('theme') === 'dark'
+    () => {
+      const saved = localStorage.getItem('theme')
+      return saved ? saved === 'dark' : true
+    }
   )
 
   // Apply theme to <html> whenever dark changes
