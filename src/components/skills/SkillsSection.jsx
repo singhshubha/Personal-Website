@@ -8,25 +8,22 @@ const randDur = () => +(Math.random() * 14 + 28).toFixed(1)
 const DIRECTIONS = ['left', 'right', 'left', 'right']
 const DURATIONS  = [randDur(), randDur(), randDur(), randDur()]
 
-function MarqueeRow({ items, direction, duration, label }) {
+function MarqueeRow({ items, direction, duration }) {
   const minRep = Math.ceil(14 / items.length)
   const track  = Array.from({ length: minRep * 2 }, () => items).flat()
 
   return (
-    <div className="sk-row-wrap">
-      <span className="sk-row-label" aria-hidden="true">{label}</span>
-      <div className="sk-marquee-outer">
-        <div
-          className={`sk-marquee-track sk-marquee-${direction}`}
-          style={{ '--dur': `${duration}s` }}
-        >
-          {track.map((skill, i) => (
-            <span key={i} className="sk-marquee-item">
-              <span className="sk-marquee-name">{skill.name}</span>
-              <span className="sk-marquee-sep" aria-hidden="true">◆</span>
-            </span>
-          ))}
-        </div>
+    <div className="sk-marquee-outer">
+      <div
+        className={`sk-marquee-track sk-marquee-${direction}`}
+        style={{ '--dur': `${duration}s` }}
+      >
+        {track.map((skill, i) => (
+          <span key={i} className="sk-marquee-item">
+            <span className="sk-marquee-name">{skill.name}</span>
+            <span className="sk-marquee-sep" aria-hidden="true">◆</span>
+          </span>
+        ))}
       </div>
     </div>
   )
@@ -88,7 +85,6 @@ export default function SkillsSection() {
                 items={group.items}
                 direction={DIRECTIONS[gi]}
                 duration={DURATIONS[gi]}
-                label={group.label}
               />
             </motion.div>
           ))}

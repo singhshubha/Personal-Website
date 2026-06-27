@@ -644,28 +644,6 @@ a { text-decoration: none; color: inherit; }
   to   { transform: translateX(0); }
 }
 
-/* Row label + marquee wrapper */
-.sk-row-wrap {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.sk-row-label {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  font-size: 0.6rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--blue);
-  opacity: 0.5;
-  white-space: nowrap;
-  flex-shrink: 0;
-  width: 14px;
-  user-select: none;
-}
-
 /* Each skill item inside the track */
 .sk-marquee-item {
   display: inline-flex;
