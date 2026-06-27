@@ -21,7 +21,6 @@ function MarqueeRow({ items, direction, duration }) {
         {track.map((skill, i) => (
           <span key={i} className="sk-marquee-item">
             <span className="sk-marquee-name">{skill.name}</span>
-            <span className="sk-marquee-sep" aria-hidden="true">◆</span>
           </span>
         ))}
       </div>
