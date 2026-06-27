@@ -150,9 +150,19 @@ a { text-decoration: none; color: inherit; }
 
 /* ── Section wrapper ──────────────────────────────── */
 .section {
-  padding: 100px 0;
+  padding: 110px 0;
   position: relative;
   background: transparent;
+}
+
+/* About needs extra bottom clearance for the overflowing stat chips */
+#about {
+  padding-bottom: 160px;
+}
+
+/* Education cards sit high — tighten the excess bottom space */
+#education {
+  padding-bottom: 80px;
 }
 
 .container {
@@ -1059,7 +1069,9 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--text);
+  background: rgba(201, 136, 58, 0.12);
+  border: 1px solid rgba(201, 136, 58, 0.22);
+  color: var(--blue);
   flex-shrink: 0;
 }
 .contact-form-wrap {
