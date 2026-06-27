@@ -52,19 +52,6 @@ export const skillGroups = [
       { name: 'SHAP',          proficiency: 65, level: 'Intermediate' },
     ],
   },
-  {
-    id:    'design',
-    label: 'Design & Tools',
-    color: '#c9883a',
-    items: [
-      { name: 'Figma',              proficiency: 75, level: 'Intermediate' },
-      { name: 'Canva',              proficiency: 82, level: 'Experienced'  },
-      { name: 'Tableau',            proficiency: 70, level: 'Intermediate' },
-      { name: 'Adobe Illustrator',  proficiency: 60, level: 'Intermediate' },
-      { name: 'PowerPoint',         proficiency: 88, level: 'Experienced'  },
-      { name: 'UI / UX Design',     proficiency: 68, level: 'Intermediate' },
-    ],
-  },
 ]
 
 export const projects = [

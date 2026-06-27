@@ -5,8 +5,8 @@ import { skillGroups } from '../../data/content'
 // Fresh random duration each page load — range 28–42s, narrow spread so
 // rows feel related but never fully lock in sync with each other.
 const randDur = () => +(Math.random() * 14 + 28).toFixed(1)
-const DIRECTIONS = ['left', 'right', 'left', 'right']
-const DURATIONS  = [randDur(), randDur(), randDur(), randDur()]
+const DIRECTIONS = ['left', 'right', 'left']
+const DURATIONS  = [randDur(), randDur(), randDur()]
 
 function MarqueeRow({ items, direction, duration }) {
   const minRep = Math.ceil(14 / items.length)
