@@ -28,14 +28,27 @@ export default function AboutSection() {
             <div className="about-image-frame">
               <img src="/assets/full-pp.JPG" alt="Shubha Swarnim Singh" />
             </div>
-            <div className="about-stat-chips">
+            <motion.div
+              className="about-stat-chips"
+              variants={{ show: { transition: { staggerChildren: 0.12, delayChildren: 0.2 } } }}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: '-80px' }}
+            >
               {stats.map(({ num, label }) => (
-                <div className="about-stat-chip" key={label}>
+                <motion.div
+                  className="about-stat-chip"
+                  key={label}
+                  variants={{
+                    hidden: { opacity: 0, y: 18, scale: 0.94 },
+                    show:   { opacity: 1, y: 0,  scale: 1,    transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] } },
+                  }}
+                >
                   <div className="about-stat-num">{num}</div>
                   <div className="about-stat-label">{label}</div>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </motion.div>
 
           {/* ── Text column ── */}

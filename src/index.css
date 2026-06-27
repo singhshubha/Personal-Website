@@ -644,11 +644,33 @@ a { text-decoration: none; color: inherit; }
   to   { transform: translateX(0); }
 }
 
+/* Row label + marquee wrapper */
+.sk-row-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.sk-row-label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blue);
+  opacity: 0.5;
+  white-space: nowrap;
+  flex-shrink: 0;
+  width: 14px;
+  user-select: none;
+}
+
 /* Each skill item inside the track */
 .sk-marquee-item {
   display: inline-flex;
   align-items: center;
-  padding: 0 52px;
+  padding: 0 36px;
   white-space: nowrap;
 }
 
@@ -658,6 +680,14 @@ a { text-decoration: none; color: inherit; }
   font-weight: 400;
   color: var(--text);
   letter-spacing: 0.01em;
+}
+
+.sk-marquee-sep {
+  font-size: 0.42rem;
+  color: var(--blue);
+  opacity: 0.38;
+  margin-left: 36px;
+  flex-shrink: 0;
 }
 
 /* ── Projects ─────────────────────────────────────── */
@@ -688,7 +718,6 @@ a { text-decoration: none; color: inherit; }
   border-radius: var(--radius);
 }
 .project-card:hover {
-  transform: translateY(-8px);
   border-color: rgba(201,136,58,0.2);
   box-shadow: 0 20px 60px rgba(0,0,0,0.1);
 }
