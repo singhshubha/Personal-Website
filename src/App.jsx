@@ -7,6 +7,7 @@ import StickyPhotoSidebar   from './components/StickyPhotoSidebar'
 
 // Lazy-load below-fold sections for faster initial load
 const AboutSection      = lazy(() => import('./components/about/AboutSection'))
+const StatsSection      = lazy(() => import('./components/stats/StatsSection'))
 const SkillsSection     = lazy(() => import('./components/skills/SkillsSection'))
 const ProjectsSection   = lazy(() => import('./components/projects/ProjectsSection'))
 const ExperienceSection = lazy(() => import('./components/experience/ExperienceSection'))
@@ -70,6 +71,10 @@ export default function App() {
 
         <Suspense fallback={<SectionLoader />}>
           <AboutSection />
+        </Suspense>
+
+        <Suspense fallback={<SectionLoader />}>
+          <StatsSection />
         </Suspense>
 
         <Suspense fallback={<SectionLoader />}>

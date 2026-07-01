@@ -24,6 +24,7 @@ export const skillGroups = [
       { name: 'SQL',        proficiency: 72, level: 'Intermediate' },
     ],
   },
+  
   {
     id:    'web',
     label: 'Web & Frameworks',

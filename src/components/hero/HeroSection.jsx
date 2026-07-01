@@ -36,24 +36,10 @@ function TypeWriter({ titles }) {
   )
 }
 
-// pos:  'X% Y%'  — X moves left(0%) ↔ right(100%), Y moves up(0%) ↔ down(100%)
-// size: '100%' = fit, '150%' = zoom in, '80%' = zoom out
-const PHOTOS = [
-  { src: '/assets/main-pic-1.png', pos: '55% 57%', size: '250%' },
-  { src: '/assets/main-pic-2.png', pos: '55% 57%', size: '250%' },
-  { src: '/assets/main-pic-3.png', pos: '55% 57%', size: '250%' },
-  { src: '/assets/main-pic-4.png', pos: '55% 57%', size: '250%' },
-]
-const INTERVAL = 2800
+const PHOTO = { src: '/assets/main-pic-1.png', pos: '55% 57%', size: '250%' }
 
 // ─── Hero section ─────────────────────────────────────────────────────────────
 export default function HeroSection() {
-  const [active, setActive] = useState(0)
-
-  useEffect(() => {
-    const id = setInterval(() => setActive(i => (i + 1) % PHOTOS.length), INTERVAL)
-    return () => clearInterval(id)
-  }, [])
 
   return (
     <section className="hero" id="hero">
@@ -66,15 +52,12 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <div className="hero-avatar-wrap">
-            {PHOTOS.map(({ src, pos, size }, i) => (
-              <div
-                key={src}
-                role="img"
-                aria-label="Shubha Singh"
-                className={`hero-avatar${i === active ? ' active' : ''}`}
-                style={{ backgroundImage: `url(${src})`, backgroundPosition: pos, backgroundSize: size }}
-              />
-            ))}
+            <div
+              role="img"
+              aria-label="Shubha Singh"
+              className="hero-avatar active"
+              style={{ backgroundImage: `url(${PHOTO.src})`, backgroundPosition: PHOTO.pos, backgroundSize: PHOTO.size }}
+            />
           </div>
           <p style={{ fontSize: '1rem', color: 'var(--text-muted)', marginBottom: '0.35rem', fontWeight: 500 }}>
             Hello, I'm
