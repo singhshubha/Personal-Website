@@ -117,13 +117,13 @@ export const experience = [
       'Designed and deployed ML infrastructure using Python, Scikit-learn, and XGBoost to predict store profitability across 2,200+ locations, supporting $700M+ CAPEX allocation decisions. Built scalable data pipelines and reduced analysis latency by 87.5% through query and workflow optimization.',
   },
   {
-    role: 'IT Intern',
-    organization: 'The College of Idaho',
-    period: 'Dec 2022 – May 2023',
-    type: 'work',
-    icon: '🖥️',
+    role: 'ASCI Treasurer',
+    organization: 'Associated Students of The College of Idaho',
+    period: 'August 2024 – May2025',
+    type: 'leadership',
+    icon: '💰',
     description:
-      'Managed relational databases with over 1 million records, optimized SQL queries for institutional analytics, and deployed Multi-Factor Authentication (MFA) for 1,000+ users to strengthen campus-wide security.',
+      'Managed a $100,000+ student government budget, oversee funding allocations, and promoted financial transparency while collaborating with campus leadership on strategic initiatives.',
   },
   {
     role: 'Student Hall Director and RA',
@@ -135,13 +135,13 @@ export const experience = [
       'Lead residential operations for 200+ students, fostering an inclusive community through mentorship, conflict resolution, crisis response, and educational programming.',
   },
   {
-    role: 'ASCI Treasurer',
-    organization: 'Associated Students of The College of Idaho',
-    period: 'August 2024 – May2025',
-    type: 'leadership',
-    icon: '💰',
+    role: 'IT Intern',
+    organization: 'The College of Idaho',
+    period: 'Dec 2022 – May 2023',
+    type: 'work',
+    icon: '🖥️',
     description:
-      'Managed a $100,000+ student government budget, oversee funding allocations, and promoted financial transparency while collaborating with campus leadership on strategic initiatives.',
+      'Managed relational databases with over 1 million records, optimized SQL queries for institutional analytics, and deployed Multi-Factor Authentication (MFA) for 1,000+ users to strengthen campus-wide security.',
   }
 ]
 

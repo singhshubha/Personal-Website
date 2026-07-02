@@ -36,7 +36,7 @@ function TypeWriter({ titles }) {
   )
 }
 
-const PHOTO = { src: '/assets/main-pic-1.png', pos: '55% 57%', size: '250%' }
+const PHOTO = { src: '/assets/main-pic-1.png', pos: '50% 30%', size: '145%' }
 
 // ─── Hero section ─────────────────────────────────────────────────────────────
 export default function HeroSection() {
